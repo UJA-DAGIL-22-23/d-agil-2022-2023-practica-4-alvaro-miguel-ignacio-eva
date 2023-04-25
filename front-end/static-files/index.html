@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplicación Microservicios Plantilla</title>
+
+    <!-- Cargamos biblioteca Jasmine -->
+
+    <link rel="stylesheet" href="lib/jasmine-4.5.0/jasmine.css">
+    <script src="lib/jasmine-4.5.0/jasmine.js"></script>
+    <script src="lib/jasmine-4.5.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-4.5.0/boot0.js"></script>
+    <script src="lib/jasmine-4.5.0/boot1.js"></script>
+
+    <!-- Cargamos nuestros CSS -->
+    <link rel="stylesheet" href="css/front-end.css">
+
+
+</head>
+
+<body>
+    <h1>Aplicación Microservicios Plantilla</h1>
+    <!-- Barra de navegación de la aplicación -->
+    <nav>
+        <a href="javascript:Plantilla.procesarHome()" class="opcion-principal"
+            title="Llama a la ruta / del MS Plantilla">Home</a>
+        <a href="javascript:Plantilla.procesarAcercaDe()" class="opcion-principal"
+            title="Llama a la ruta /acercade del MS Plantilla">Acerca de</a>
+        <a href="javascript:Plantilla.listar()" class="opcion-principal mostrar"
+           title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores con todos sus datos </a>
+        <a href="javascript:Plantilla.listar2()" class="opcion-principal mostrar"
+           title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores solo con el nombre </a>
+        <a href="javascript:Plantilla.listar3('nombre')" class="opcion-principal mostrar"
+           title="Realiza un listado de todas las personas que hay en la BBDD">Listar alfabeticamente por nombre </a>
+        <div class="dropdown">
+            <button class="opcion-principal">Opciones de listar datos por </button>
+            <div class="dropdown-content">
+                <a href="javascript:Plantilla.listar4('nombre')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">nombre alfabeticamente  </a>
+                <a href="javascript:Plantilla.listar4('apellidos')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">apellido alfabeticamente </a>
+                <a href="javascript:Plantilla.listar4('fechaNacimiento')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">fecha de nacimiento </a>
+                <a href="javascript:Plantilla.listar4('casaHogwarts')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">casa de Hodwats alfabeticamente </a>
+                <a href="javascript:Plantilla.listar4('tipoEscoba')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">tipo de escoba alfabeticamente </a>
+                <a href="javascript:Plantilla.listar4('posicion')" class="opcion-principal"
+                   title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">posicion alfabeticamente</a>
+            </div>
+
+        </div>
+        <div style="padding-top: 30px">
+            <input type = "text" id="campo-busqueda">
+            <button class="btn" onclick="Plantilla.jugadorBuscado(document.getElementById('campo-busqueda').value)">Buscar por nombre</button>
+        </div>
+
+    </nav>
+
+    <!-- 
+        Article en el que se va a mostrar la info cuando se pinche una opción del menú 
+        Todos los apartados de este article se rellenarán con funciones en Javascript
+    -->
+    <article id="seccion-principal" >
+        <!-- Título del article -->
+        <h2 id="seccion-principal-titulo"></h2>
+        <!-- Contenido del article -->
+        <div id="seccion-principal-contenido">
+            <div id="tabla-formulario-persona" class="ocultar"></div>
+        </div>
+    </article>
+
+
+    <!-- 
+        ...............  ZONA DE CARGA DE FICHEROS JS .........................
+    
+        Debe ponerse al final del documento para que estén creados los elementos del DOM.
+        
+    -->
+
+    <!-- Cargamos ficheros JS propios del proyecto -->
+    <script src="js/front-end.js"></script>
+    <script src="js/ms-plantilla.js"></script>
+
+
+    <!-- Cargamos ficheros spec con los tests -->
+    <script src="js/front-end-spec.js"></script>
+    <script src="js/ms-plantilla-spec.js"></script>
+
+</body>
+
+</html>
