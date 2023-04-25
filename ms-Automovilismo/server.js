@@ -17,7 +17,7 @@ const routes = require("./routes")
 app.use("/", routes);
 
 
-const port = 8002;
+const port = 8005;
 app.listen(port, () => {
     console.log(`Microservicio PLANTILLA ejecutándose en puerto ${port}!`);
 });

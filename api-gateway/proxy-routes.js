@@ -40,7 +40,18 @@ const ROUTES = [
                 [`^/Rugby`]: '',
             },
         }
-    }
+    },
+    {
+        url: '/Automovilismo',
+
+        proxy: {
+            target: "http://localhost:8005",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/Automovilismo`]: '',
+            },
+        }
+    },
 ]
 
 exports.routes = ROUTES;
