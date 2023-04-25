@@ -6,6 +6,8 @@
  * @date 03-feb-2023
  */
 
+
+
 const ROUTES = [
     {
         url: '/Quidditch',
@@ -14,6 +16,28 @@ const ROUTES = [
             changeOrigin: true,
             pathRewrite: {
                 [`^/Quidditch`]: '',
+            },
+        }
+    },
+    {
+        url: '/BADMINTON',
+
+        proxy: {
+            target: "http://localhost:8003",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/BADMINTON`]: '',
+            },
+        }
+    },
+    {
+        url: '/Rugby',
+
+        proxy: {
+            target: "http://localhost:8004",
+            changeOrigin: true,
+            pathRewrite: {
+                [`^/Rugby`]: '',
             },
         }
     }
