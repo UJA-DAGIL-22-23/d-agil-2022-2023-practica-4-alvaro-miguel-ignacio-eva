@@ -1,5 +1,5 @@
 /**
- * @file ms-plantilla-spec.js
+ * @file ms-Quidditch-spec.js
  * @description Fichero TDD para probar todo lo relacionado con MS Plantilla en el front-end
  * @author Víctor M. Rivas <vrivas@ujaen.es>
  * @date 03-feb-2023
@@ -10,8 +10,8 @@
 // Constantes para usar en las pruebas
 const elementoTitulo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
 const elementoContenido = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
-const TITULO_HOME = "Plantilla Home"
-const TITULO_ACERCA_DE = "Plantilla Acerca de"
+const TITULO_HOME = "Quidditch Home"
+const TITULO_ACERCA_DE = "Quidditch Acerca de"
 const LISTADO_IMPRIMIR_MUCHAS_PERSONAS = "Listado de personas con todos los datos "
 const LISTADO_IMPRIMIR_MUCHAS_PERSONAS_ALFABETICAMENTE="Listado de personas ordenadas alfabeticamente solo con su nombre"
 const CEREAR = "cerear"
@@ -56,86 +56,86 @@ function esperar(ms) {
 
 // SPECS a probar
 
-describe("Plantilla.mostrarHome: ", function () {
+describe("Quidditch.mostrarHome: ", function () {
 
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.mostrarHome()
+            Quidditch.mostrarHome()
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(Plantilla.datosDescargadosNulos.mensaje)
+            expect(elementoContenido.innerHTML).toBe(Quidditch.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Plantilla.mostrarHome(23)
+            Quidditch.mostrarHome(23)
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(Plantilla.datosDescargadosNulos.mensaje)
+            expect(elementoContenido.innerHTML).toBe(Quidditch.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje",
         function () {
             // Objeto vacío
-            Plantilla.mostrarHome({})
+            Quidditch.mostrarHome({})
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(Plantilla.datosDescargadosNulos.mensaje)
+            expect(elementoContenido.innerHTML).toBe(Quidditch.datosDescargadosNulos.mensaje)
 
             // Objeto sin campo mensaje
-            Plantilla.mostrarHome({ foo: "bar" })
+            Quidditch.mostrarHome({ foo: "bar" })
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
-            expect(elementoContenido.innerHTML).toBe(Plantilla.datosDescargadosNulos.mensaje)
+            expect(elementoContenido.innerHTML).toBe(Quidditch.datosDescargadosNulos.mensaje)
         })
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            Plantilla.mostrarHome(datosDescargadosPrueba)
+            Quidditch.mostrarHome(datosDescargadosPrueba)
             expect(elementoTitulo.innerHTML).toBe(TITULO_HOME)
             expect(elementoContenido.innerHTML).toBe(datosDescargadosPrueba.mensaje)
         })
 })
 
 
-describe("Plantilla.mostrarAcercaDe: ", function () {
+describe("Quidditch.mostrarAcercaDe: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.mostrarAcercaDe()
+            Quidditch.mostrarAcercaDe()
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-            expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Plantilla.mostrarAcercaDe(23)
+            Quidditch.mostrarAcercaDe(23)
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-            expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje o autor o email o fecha ",
         function () {
             // Objeto vacío
-           Plantilla.mostrarAcercaDe({})
+            Quidditch.mostrarAcercaDe({})
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-            expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
 
             // Objeto sin campo mensaje
-           Plantilla.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
+            Quidditch.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
            expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-           expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+           expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo autor
-           Plantilla.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
+            Quidditch.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-            expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo email
-          Plantilla.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
+            Quidditch.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
           expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-           expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeFalse()
+           expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeFalse()
             // Objeto sin campo fecha
-           Plantilla.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
+            Quidditch.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
-           expect(elementoContenido.innerHTML.search(Plantilla.datosDescargadosNulos.mensaje) >= 0).toBeFalse()
+           expect(elementoContenido.innerHTML.search(Quidditch.datosDescargadosNulos.mensaje) >= 0).toBeFalse()
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            Plantilla.mostrarAcercaDe(datosDescargadosPrueba)
+            Quidditch.mostrarAcercaDe(datosDescargadosPrueba)
             expect(elementoTitulo.innerHTML).toBe(TITULO_ACERCA_DE)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
@@ -146,89 +146,89 @@ describe("Plantilla.mostrarAcercaDe: ", function () {
 
 })
 
-describe("Plantilla.imprimeMuchasPersonas: ", function () {
+describe("Quidditch.imprimeMuchasPersonas: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.imprimeMuchasPersonas([])
+            Quidditch.imprimeMuchasPersonas([])
             expect(elementoTitulo.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS)
 
         })
     it("muestra datos nulos cuando le pasamos un valor no nulo ",
         function () {
-            Plantilla.imprimeMuchasPersonas(15)
+            Quidditch.imprimeMuchasPersonas(15)
             expect(elementoTitulo.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS)
 
         })
 })
 
-describe("Plantilla.imprimeOrdenadorAlfabeticamente: ", function (){
+describe("Quidditch.imprimeOrdenadorAlfabeticamente: ", function (){
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.imprimeOrdenadorAlfabeticamente([])
+            Quidditch.imprimeOrdenadorAlfabeticamente([])
             expect(elementoTitulo.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_ALFABETICAMENTE)
 
         })
     it("muestra datos nulos cuando le pasamos un valor no nulo ",
         function () {
-            Plantilla.imprimeOrdenadorAlfabeticamente(15)
+            Quidditch.imprimeOrdenadorAlfabeticamente(15)
             expect(elementoTitulo.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_ALFABETICAMENTE)
 
         })
 })
 
-describe("Plantilla.cerear: ", function (){
+describe("Quidditch.cerear: ", function (){
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.cerear()
-            expect(Plantilla.cerear(5)).toBe("05");
+            Quidditch.cerear()
+            expect(Quidditch.cerear(5)).toBe("05");
 
         })
 
 })
 
-describe("Plantilla.imprimeNombreMuchasPersonas: ", function (){
+describe("Quidditch.imprimeNombreMuchasPersonas: ", function (){
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Plantilla.imprimeNombreMuchasPersonas([])
+            Quidditch.imprimeNombreMuchasPersonas([])
             expect(elementoTitulo.innerHTML).toBe(LISTADO_NOMBRE_MUCHAS_PERSONAS)
 
         })
     it("muestra datos nulos cuando le pasamos un valor no nulo ",
         function () {
-            Plantilla.imprimeNombreMuchasPersonas(15)
+            Quidditch.imprimeNombreMuchasPersonas(15)
             expect(elementoTitulo.innerHTML).toBe(LISTADO_NOMBRE_MUCHAS_PERSONAS)
 
         })
 })
 
-describe("Plantilla.imprimeOrdenadorAlfabeticamenteTodosCampos", function() {
+describe("Quidditch.imprimeOrdenadorAlfabeticamenteTodosCampos", function() {
         it("muestra datos nulos cuando le pasamos un valor nulo",
             function () {
-                Plantilla.imprimeOrdenadorAlfabeticamenteTodosCampos([])
+                Quidditch.imprimeOrdenadorAlfabeticamenteTodosCampos([])
                 expect(elementoTitulo.innerHTML).toBe(LISTADO_NOMBRE_MUCHAS_PERSONAS_TODOS_DATOS)
 
             })
         it("muestra datos nulos cuando le pasamos un valor no nulo ",
             function () {
-                Plantilla.imprimeOrdenadorAlfabeticamenteTodosCampos(15)
+                Quidditch.imprimeOrdenadorAlfabeticamenteTodosCampos(15)
                 expect(elementoTitulo.innerHTML).toBe(LISTADO_NOMBRE_MUCHAS_PERSONAS_TODOS_DATOS)
 
             })
     })
 
-describe("Plantilla.recuperaJugadoBuscado", function(){
+describe("Quidditch.recuperaJugadoBuscado", function(){
     it("devuelve un vector vacio cuando no se encuentra en jugador buscado", async function(){
         const callBackFn = function(resultado){
             expect(resultado).toEqual([]);
         }
-        await Plantilla.recuperaJugadorBuscado("Jugador Inexistente",callBackFn);
+        await Quidditch.recuperaJugadorBuscado("Jugador Inexistente",callBackFn);
     })
 })
 
-describe("Plantilla.habilitarDeshabilitarCamposEditables", function() {
+describe("Quidditch.habilitarDeshabilitarCamposEditables", function() {
     beforeEach(function() {
         // Crea un objeto de prueba con los campos de formulario
-        Plantilla.form = {
+        Quidditch.form = {
             campo1: "campo1",
             campo2: "campo2",
             campo3: "campo3"
@@ -246,7 +246,7 @@ describe("Plantilla.habilitarDeshabilitarCamposEditables", function() {
 
     it("debe deshabilitar los campos editables cuando se llama con true", function() {
         // Llama a la función con true
-        Plantilla.habilitarDeshabilitarCamposEditables(true);
+        Quidditch.habilitarDeshabilitarCamposEditables(true);
 
         // Verifica que todos los campos de formulario están deshabilitados
         expect(document.getElementById("campo1").disabled).toEqual(true);
@@ -256,7 +256,7 @@ describe("Plantilla.habilitarDeshabilitarCamposEditables", function() {
 
     it("debe habilitar los campos editables cuando se llama con false", function() {
         // Llama a la función con false
-        Plantilla.habilitarDeshabilitarCamposEditables(false);
+        Quidditch.habilitarDeshabilitarCamposEditables(false);
 
         // Verifica que todos los campos de formulario están habilitados
         expect(document.getElementById("campo1").disabled).toEqual(false);
@@ -266,7 +266,7 @@ describe("Plantilla.habilitarDeshabilitarCamposEditables", function() {
 
     it("debe deshabilitar los campos editables cuando se llama sin argumentos", function() {
         // Llama a la función sin argumentos
-        Plantilla.habilitarDeshabilitarCamposEditables();
+        Quidditch.habilitarDeshabilitarCamposEditables();
 
         // Verifica que todos los campos de formulario están deshabilitados
         expect(document.getElementById("campo1").disabled).toEqual(true);
@@ -275,7 +275,7 @@ describe("Plantilla.habilitarDeshabilitarCamposEditables", function() {
     });
 });
 
-describe("Plantilla.recuperaJugadorBuscado", function() {
+describe("Quidditch.recuperaJugadorBuscado", function() {
 
     it("debería llamar al callback con el jugador encontrado", async function() {
         // Arrange
@@ -293,7 +293,7 @@ describe("Plantilla.recuperaJugadorBuscado", function() {
         const callBackSpy = jasmine.createSpy("callBackSpy");
 
         // Act
-        await Plantilla.recuperaJugadorBuscado(nombreBuscado, callBackSpy);
+        await Quidditch.recuperaJugadorBuscado(nombreBuscado, callBackSpy);
 
         // Assert
         expect(fetchSpy).toHaveBeenCalledWith(Frontend.API_GATEWAY + "/Quidditch/getTodas");
@@ -309,7 +309,7 @@ describe("Plantilla.recuperaJugadorBuscado", function() {
         const callBackSpy = jasmine.createSpy("callBackSpy");
 
         // Act
-        await Plantilla.recuperaJugadorBuscado(nombreBuscado, callBackSpy);
+        await Quidditch.recuperaJugadorBuscado(nombreBuscado, callBackSpy);
 
         // Assert
         expect(fetchSpy).toHaveBeenCalledWith(Frontend.API_GATEWAY + "/Quidditch/getTodas");
@@ -320,12 +320,12 @@ describe("Plantilla.recuperaJugadorBuscado", function() {
 
 });
 /*
-describe('Plantilla.recuperaDatosAlmacenados', function() {
+describe('Quidditch.recuperaDatosAlmacenados', function() {
     it('should return the stored persona object', function() {
         const mockPersona = { id: 1, name: 'Harry Potter' };
-        Plantilla.personaMostrada = mockPersona;
+        Quidditch.personaMostrada = mockPersona;
 
-        const result = Plantilla.recuperaDatosAlmacenados();
+        const result = Quidditch.recuperaDatosAlmacenados();
 
         expect(result).toEqual(mockPersona);
     });

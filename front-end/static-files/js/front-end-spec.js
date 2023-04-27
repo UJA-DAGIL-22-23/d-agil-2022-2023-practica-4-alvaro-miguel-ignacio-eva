@@ -1,6 +1,6 @@
 /**
  * @file front-end-spec.js
- * @description Fichero TDD para probar todo lo relacionado con MS Plantilla en el front-end
+ * @description Fichero TDD para probar to do lo relacionado con MS Quidditch en el front-end
  * @author Víctor M. Rivas <vrivas@ujaen.es>
  * @date 03-feb-2023
  */
