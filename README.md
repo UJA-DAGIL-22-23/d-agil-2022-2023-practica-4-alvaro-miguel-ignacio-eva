@@ -12,3 +12,5 @@
 
 ## Nombre: Miguel Ángel Carrasco Infante
 ### Correo: maci0002@red.ujaen.es
+
+* Enlace tablero Trello: https://trello.com/invite/b/HDtBu0vL/ATTI7094f890371d6d6f8ea26033cdce584522B6110D/p4-desarrolloagil
