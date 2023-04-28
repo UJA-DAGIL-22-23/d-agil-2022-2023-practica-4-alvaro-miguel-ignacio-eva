@@ -7,8 +7,8 @@
 ## Nombre: Eva Temes Moya
 ### Correo: etm00016@red.ujaen.es
 
-## Nombre: Ignacio Cervilla 
-### Correo: 
+## Nombre: Ignacio Cervilla Gomáriz
+### Correo: icg00048@red.ujaen.es
 
 ## Nombre: Miguel Ángel Carrasco Infante
 ### Correo: maci0002@red.ujaen.es
