@@ -31,7 +31,7 @@ Quidditch.datosDescargadosNulos = {
 
 }
 // Tags que voy a usar para sustituir los campos
-Quidditch.QuidditchTags = {
+Quidditch.plantillaTags = {
     "ID": "### ID ###",
     "NOMBRE": "### NOMBRE ###",
     "APELLIDOS": "### APELLIDOS ###",
@@ -66,30 +66,30 @@ Quidditch.QuidditchFormularioPersona.formulario = `
                         <th width="10%">Acciones</th>
         </thead>
         <tbody>
-            <tr title="${Quidditch.QuidditchTags.ID}">
+            <tr title="${Quidditch.plantillaTags.ID}">
                 <td><input type="text" class="form-persona-elemento" disabled id="form-persona-id"
-                        value="${Quidditch.QuidditchTags.ID}" 
+                        value="${Quidditch.plantillaTags.ID}" 
                         name="id_persona"/></td>
                 <td><input type="text" class="form-persona-elemento editable" 
-                        id="form-persona-nombre" required value="${Quidditch.QuidditchTags.NOMBRE}" 
+                        id="form-persona-nombre" required value="${Quidditch.plantillaTags.NOMBRE}" 
                         name="nombre_persona"/></td>
                 <td><input type="text" class="form-persona-elemento editable" 
-                        id="form-persona-apellidos" value="${Quidditch.QuidditchTags.APELLIDOS}" 
+                        id="form-persona-apellidos" value="${Quidditch.plantillaTags.APELLIDOS}" 
                         name="apellidos_persona"/></td>
                 <td><input type="text" class="form-persona-elemento editable" 
-                        id="form-persona-posicion" required value="${Quidditch.QuidditchTags.POSICION}" 
+                        id="form-persona-posicion" required value="${Quidditch.plantillaTags.POSICION}" 
                         name="posicion_persona"/></td>
                 <td><input type="text" class="form-persona-elemento"  disabled
-                        id="form-persona-fechaNacimiento" required value="${Quidditch.QuidditchTags.FECHADENACIMIENTO}" 
+                        id="form-persona-fechaNacimiento" required value="${Quidditch.plantillaTags.FECHADENACIMIENTO}" 
                         name="fechaNacimiento_persona"/></td>
                           <td><input type="text" class="form-persona-elemento editable"   
-                        id="form-persona-casaHodwats" required value="${Quidditch.QuidditchTags.CASAHODWARTS}" 
+                        id="form-persona-casaHodwats" required value="${Quidditch.plantillaTags.CASAHODWARTS}" 
                         name="casaHodwarts"/></td>
                  <td><input type="text" class="form-persona-elemento editable" 
-                        id="form-persona-copasMundiales" required value="${Quidditch.QuidditchTags.COPASMUNDIALES}" 
+                        id="form-persona-copasMundiales" required value="${Quidditch.plantillaTags.COPASMUNDIALES}" 
                         name="copasMundiales_persona"/></td>
                 <td width="20%"><input type="text" class="form-persona-elemento editable"   
-                        id="form-persona-tipoEscoba" required value="${Quidditch.QuidditchTags.TIPOESCOBA}" 
+                        id="form-persona-tipoEscoba" required value="${Quidditch.plantillaTags.TIPOESCOBA}" 
                         name="tipoEscoba_persona"/></td>
                 <td>
                     <div><a href="javascript:Quidditch.editar()" class="opcion-secundaria mostrar">Editar</a></div>
@@ -346,21 +346,21 @@ Quidditch.QuidditchTablaPersonas.actualiza2 = function (persona) {
  * @param {Persona} Persona Objeto con los datos de la persona que queremos escribir en el TR
  * @returns La Quidditch del cuerpo de la tabla con los datos actualizados
  */
-Quidditch.sustituyeTags = function (Quidditch, persona) {
-    return Quidditch
-        .replace(new RegExp(Quidditch.QuidditchTags.ID, 'g'), persona.ref['@ref'].id)
-        .replace(new RegExp(Quidditch.QuidditchTags.NOMBRE, 'g'), persona.data.nombre)
-        .replace(new RegExp(Quidditch.QuidditchTags.APELLIDOS, 'g'), persona.data.apellidos)
-        .replace(new RegExp(Quidditch.QuidditchTags.POSICION, 'g'), persona.data.posicion)
-        .replace(new RegExp(Quidditch.QuidditchTags.FECHADENACIMIENTO, 'g'), persona.data.fechaNacimiento.annio + "/" + persona.data.fechaNacimiento.mes + "/" + persona.data.fechaNacimiento.dia)
-        .replace(new RegExp(Quidditch.QuidditchTags.CASAHODWARTS, 'g'), persona.data.casaHogwarts)
-        .replace(new RegExp(Quidditch.QuidditchTags.COPASMUNDIALES, 'g'), persona.data.copasMundiales)
-        .replace(new RegExp(Quidditch.QuidditchTags.TIPOESCOBA, 'g'), persona.data.tipoEscoba)
+Quidditch.sustituyeTags = function (plantilla, persona) {
+    return plantilla
+        .replace(new RegExp(Quidditch.plantillaTags.ID, 'g'), persona.ref['@ref'].id)
+        .replace(new RegExp(Quidditch.plantillaTags.NOMBRE, 'g'), persona.data.nombre)
+        .replace(new RegExp(Quidditch.plantillaTags.APELLIDOS, 'g'), persona.data.apellidos)
+        .replace(new RegExp(Quidditch.plantillaTags.POSICION, 'g'), persona.data.posicion)
+        .replace(new RegExp(Quidditch.plantillaTags.FECHADENACIMIENTO, 'g'), persona.data.fechaNacimiento.annio + "/" + persona.data.fechaNacimiento.mes + "/" + persona.data.fechaNacimiento.dia)
+        .replace(new RegExp(Quidditch.plantillaTags.CASAHODWARTS, 'g'), persona.data.casaHogwarts)
+        .replace(new RegExp(Quidditch.plantillaTags.COPASMUNDIALES, 'g'), persona.data.copasMundiales)
+        .replace(new RegExp(Quidditch.plantillaTags.TIPOESCOBA, 'g'), persona.data.tipoEscoba)
 
 }
-Quidditch.sustituyeTags2 = function (Quidditch, persona) {
-    return Quidditch
-        .replace(new RegExp(Quidditch.QuidditchTags.NOMBRE, 'g'), persona.data.nombre)
+Quidditch.sustituyeTags2 = function (plantilla, persona) {
+    return plantilla
+        .replace(new RegExp(Quidditch.plantillaTags.NOMBRE, 'g'), persona.data.nombre)
 
 }
 
@@ -413,26 +413,26 @@ Quidditch.listar4 = function (campo) {
 
 // Elemento TR que muestra los datos de una persona
 Quidditch.QuidditchTablaPersonas.cuerpo = `
-    <tr title="${Quidditch.QuidditchTags.ID}">
-        <td>${Quidditch.QuidditchTags.ID}</td>
-        <td>${Quidditch.QuidditchTags.NOMBRE}</td>
-        <td>${Quidditch.QuidditchTags.APELLIDOS}</td>
-        <td>${Quidditch.QuidditchTags.POSICION}</td>
-        <td>${Quidditch.QuidditchTags.FECHADENACIMIENTO}</td>
-        <td>${Quidditch.QuidditchTags.CASAHODWARTS}</td>
-        <td>${Quidditch.QuidditchTags.COPASMUNDIALES}</td>
-        <td>${Quidditch.QuidditchTags.TIPOESCOBA}</td>
+    <tr title="${Quidditch.plantillaTags.ID}">
+        <td>${Quidditch.plantillaTags.ID}</td>
+        <td>${Quidditch.plantillaTags.NOMBRE}</td>
+        <td>${Quidditch.plantillaTags.APELLIDOS}</td>
+        <td>${Quidditch.plantillaTags.POSICION}</td>
+        <td>${Quidditch.plantillaTags.FECHADENACIMIENTO}</td>
+        <td>${Quidditch.plantillaTags.CASAHODWARTS}</td>
+        <td>${Quidditch.plantillaTags.COPASMUNDIALES}</td>
+        <td>${Quidditch.plantillaTags.TIPOESCOBA}</td>
         <td>
-                    <div><a href="javascript:Quidditch.mostrar('${Quidditch.QuidditchTags.ID}')" class="opcion-secundaria mostrar">Mostrar</a></div>
+                    <div><a href="javascript:Quidditch.mostrar('${Quidditch.plantillaTags.ID}')" class="opcion-secundaria mostrar">Mostrar</a></div>
         </td>
     </tr>
     `;
 
 // Elemento TR que muestra los datos de una persona
 Quidditch.QuidditchTablaPersonas.cuerpo2 = `
-    <tr title="${Quidditch.QuidditchTags.ID}">
+    <tr title="${Quidditch.plantillaTags.ID}">
       
-        <td>${Quidditch.QuidditchTags.NOMBRE}</td>
+        <td>${Quidditch.plantillaTags.NOMBRE}</td>
       
    
     </tr>
