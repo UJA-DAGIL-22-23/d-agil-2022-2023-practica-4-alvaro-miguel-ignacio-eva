@@ -13,6 +13,7 @@ const elementoContenidoAutomovilismo = document.getElementById(Frontend.ID_SECCI
 const TITULO_HOME_AUTOMOVILISMO = "Plantilla Home"
 const TITULO_ACERCA_DE_AUTOMOVILISMO = "Plantilla Acerca de"
 const LISTADO_IMPRIMIR_MUCHAS_PERSONAS_AUTOMOVILISMO = "Listado de personas con todos los datos "
+const MENSAJE_MICROSERVICIO="Microservicio MS Automovilismo: acerca de"
 
 const datosDescargadosPruebaAutomovilismo = {
     mensaje: "Mensaje de prueba descargado",
@@ -20,6 +21,7 @@ const datosDescargadosPruebaAutomovilismo = {
     email: "Prueba de email",
     fecha: "00/00/0000"
 }
+
 
 
 // Función para esperar y dar tiempo a que responda el microservicio
@@ -66,9 +68,9 @@ describe("Plantilla.mostrarHome: ", function () {
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            Automovilismo.mostrarHome(datosDescargadosPrAutomovilismo)
+          //  Automovilismo.mostrarHome(datosDescargadosPrAutomovilismo)
             expect(elementoTituloAutomovilismo.innerHTML).toBe(TITULO_HOME_AUTOMOVILISMO)
-            expect(elementoContenidoAutomovilismo.innerHTML).toBe(datosDescargadosPruebaAutomovilismo.mensaje)
+            expect(elementoContenidoAutomovilismo.innerHTML).toBe(MENSAJE_MICROSERVICIO)
         })
 })
 

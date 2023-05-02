@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Aplicación Microservicios Plantilla</title>
+    <title>Aplicación Microservicios Quidditch</title>
 
     <!-- Cargamos biblioteca Jasmine -->
 
@@ -19,49 +19,49 @@
 </head>
 
 <body>
-    <h1>Aplicación Microservicios Plantilla</h1>
-    <!-- Barra de navegación de la aplicación -->
+    <h1>Aplicación Microservicios Deportes</h1>
+    <!-- Barra de navegación de Quidditch -->
     <nav>
 
-        <a href="javascript:Automovilismo.procesarAcercaDe()" class="opcion-principal"
-            title="Llama a la ruta /acercade del MS Plantilla">Acerca de 🏎️ </a>
+        <a href="javascript:Quidditch.procesarAcercaDe()" class="opcion-principal"
+            title="Llama a la ruta /acercade del MS Quidditch">Acerca de 🏎️ </a>
          
-<!--  
-        <a href="javascript:Plantilla.procesarHome()" class="opcion-principal"
-            title="Llama a la ruta / del MS Plantilla">Home</a>
-        <a href="javascript:Plantilla.procesarAcercaDe()" class="opcion-principal"
-            title="Llama a la ruta /acercade del MS Plantilla">Acerca de</a>
-        <a href="javascript:Plantilla.listar()" class="opcion-principal mostrar"
+ 
+        <a href="javascript:Quidditch.procesarHome()" class="opcion-principal"
+            title="Llama a la ruta / del MS Quidditch">Home</a>
+        <a href="javascript:Quidditch.procesarAcercaDe()" class="opcion-principal"
+            title="Llama a la ruta /acercade del MS Quidditch">Acerca de</a>
+        <a href="javascript:Quidditch.listar()" class="opcion-principal mostrar"
            title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores con todos sus datos </a>
-        <a href="javascript:Plantilla.listar2()" class="opcion-principal mostrar"
+        <a href="javascript:Quidditch.listar2()" class="opcion-principal mostrar"
            title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores solo con el nombre </a>
-        <a href="javascript:Plantilla.listar3('nombre')" class="opcion-principal mostrar"
+        <a href="javascript:Quidditch.listar3('nombre')" class="opcion-principal mostrar"
            title="Realiza un listado de todas las personas que hay en la BBDD">Listar alfabeticamente por nombre </a>
         <div class="dropdown">
             <button class="opcion-principal">Opciones de listar datos por </button>
             <div class="dropdown-content">
-                <a href="javascript:Plantilla.listar4('nombre')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('nombre')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">nombre alfabeticamente  </a>
-                <a href="javascript:Plantilla.listar4('apellidos')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('apellidos')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">apellido alfabeticamente </a>
-                <a href="javascript:Plantilla.listar4('fechaNacimiento')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('fechaNacimiento')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">fecha de nacimiento </a>
-                <a href="javascript:Plantilla.listar4('casaHogwarts')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('casaHogwarts')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">casa de Hodwats alfabeticamente </a>
-                <a href="javascript:Plantilla.listar4('tipoEscoba')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('tipoEscoba')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">tipo de escoba alfabeticamente </a>
-                <a href="javascript:Plantilla.listar4('posicion')" class="opcion-principal"
+                <a href="javascript:Quidditch.listar4('posicion')" class="opcion-principal"
                    title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabeticamente">posicion alfabeticamente</a>
             </div>
 
         </div>
         <div style="padding-top: 30px">
             <input type = "text" id="campo-busqueda">
-            <button class="btn" onclick="Plantilla.jugadorBuscado(document.getElementById('campo-busqueda').value)">Buscar por nombre</button>
+            <button class="btn" onclick="Quidditch.jugadorBuscado(document.getElementById('campo-busqueda').value)">Buscar por nombre</button>
         </div>
 
     </nav>
-  -->
+  
     <!-- 
         Article en el que se va a mostrar la info cuando se pinche una opción del menú 
         Todos los apartados de este article se rellenarán con funciones en Javascript
