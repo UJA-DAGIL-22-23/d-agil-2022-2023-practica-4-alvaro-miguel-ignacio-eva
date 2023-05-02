@@ -8,15 +8,15 @@
 "use strict";
 
 /// Creo el espacio de nombres
-let Badminton = {};
+let BADMINTON = {};
 
 
-Badminton.plantillaPersonas = {}
+BADMINTON.plantillaPersonas = {}
 
-Badminton.personaMostrada = null
+BADMINTON.personaMostrada = null
 
 // Badminton de datosDescargados vacíos
-Badminton.datosDescargadosNulos = {
+BADMINTON.datosDescargadosNulos = {
     mensaje: "Datos Descargados No válidos",
     autor: "Miguel Angel Carrasco Infante",
     email: "maci0002@red.ujaen.es",
@@ -24,12 +24,12 @@ Badminton.datosDescargadosNulos = {
 }
 
 // Tags que voy a usar para sustituir los campos
-Badminton.plantillaTags = {
+BADMINTON.plantillaTags = {
     "NOMBRE": "### NOMBRE ###",
     "APELLIDOS": "### APELLIDOS ###",
 
 }
-Badminton.plantillaTagsTodos = {
+BADMINTON.plantillaTagsTodos = {
     "NOMBRE": "### NOMBRE ###",
     "APELLIDOS": "### APELLIDOS ###",
     "fechaNacimiento": "### fechaNacimiento ###",
@@ -45,15 +45,12 @@ Badminton.plantillaTagsTodos = {
 
 
 
-
-
-
 /**
  * Función que descarga la info MS Badminton al llamar a una de sus rutas
  * @param {string} ruta Ruta a descargar
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  */
-Badminton.descargarRuta = async function (ruta, callBackFn) {
+BADMINTON.descargarRuta = async function (ruta, callBackFn) {
     let response = null
 
     // Intento conectar con el microservicio Badminton
@@ -79,7 +76,7 @@ Badminton.descargarRuta = async function (ruta, callBackFn) {
 /**
  * Función principal para mostrar los datos enviados por la ruta "home" de MS Badminton
  */
-Badminton.mostrarHome = function (datosDescargados) {
+BADMINTON.mostrarHome = function (datosDescargados) {
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
 
@@ -95,7 +92,7 @@ Badminton.mostrarHome = function (datosDescargados) {
 /**
  * Función principal para mostrar los datos enviados por la ruta "acerca de" de MS Badminton
  */
-Badminton.mostrarAcercaDe = function (datosDescargados) {
+BADMINTON.mostrarAcercaDe = function (datosDescargados) {
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
     // Si datos descargados NO es un objeto 
@@ -127,29 +124,29 @@ Badminton.mostrarAcercaDe = function (datosDescargados) {
  * @param {Vector_de_personas} vector Vector con los datos de las personas a mostrar
  */
 
-Badminton.imprimePersonas = function (vector) {
+BADMINTON.imprimePersonas = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = Badminton.plantillaPersonas.cabecera
+    let msj = BADMINTON.plantillaPersonas.cabecera
     if (vector && Array.isArray(vector)) 
-        vector.forEach(e => msj += Badminton.plantillaPersonas.actualiza(e))
-    msj += Badminton.plantillaPersonas.pie
+        vector.forEach(e => msj += BADMINTON.plantillaPersonas.actualiza(e))
+    msj += BADMINTON.plantillaPersonas.pie
 
     // Borro toda la info de Article y la sustituyo por la que me interesa
     Frontend.Article.actualizar("Listado de personas", msj)
 }
 
-Badminton.imprimeTodasPersonas = function (vector) {
+BADMINTON.imprimeTodasPersonas = function (vector) {
     // Compongo el contenido que se va a mostrar dentro de la tabla
-    let msj = Badminton.plantillaPersonas.cabeceraTodos
+    let msj = BADMINTON.plantillaPersonas.cabeceraTodos
     if (vector && Array.isArray(vector)) 
-        vector.forEach(e => msj += Badminton.plantillaPersonas.actualizaTodos(e))
-    msj += Badminton.plantillaPersonas.pie
+        vector.forEach(e => msj += BADMINTON.plantillaPersonas.actualizaTodos(e))
+    msj += BADMINTON.plantillaPersonas.pie
 
     // Borro toda la info de Article y la sustituyo por la que me interesa
     Frontend.Article.actualizar("Listado de  todas las personas", msj)
 }
 
-Badminton.ordenaCampos = function(vector,campo){
+BADMINTON.ordenaCampos = function(vector, campo){
     vector.sort(function(a,b)
      {
          let campoA = null; 
@@ -166,14 +163,14 @@ Badminton.ordenaCampos = function(vector,campo){
              }
              return 0;
      });
-     let msj = Badminton.plantillaPersonas.cabecera
+     let msj = BADMINTON.plantillaPersonas.cabecera
      if (vector && Array.isArray(vector)) {
-         vector.forEach(e => msj += Badminton.plantillaPersonas.actualizaTodos(e))
+         vector.forEach(e => msj += BADMINTON.plantillaPersonas.actualizaTodos(e))
      }
-     msj += Badminton.plantillaPersonas.pie
+     msj += BADMINTON.plantillaPersonas.pie
      Frontend.Article.actualizar("Listado de personas solo con su nombre", msj)
     }
-    Badminton.ordenaNombre = function(vector,nombre){
+    BADMINTON.ordenaNombre = function(vector, nombre){
         vector.sort(function(a,b)
          {
              let nombreA = null; 
@@ -190,11 +187,11 @@ Badminton.ordenaCampos = function(vector,campo){
                  }
                  return 0;
          });
-         let msj = Badminton.plantillaPersonas.cabecera
+         let msj = BADMINTON.plantillaPersonas.cabecera
          if (vector && Array.isArray(vector)) {
-             vector.forEach(e => msj += Badminton.plantillaPersonas.actualiza(e))
+             vector.forEach(e => msj += BADMINTON.plantillaPersonas.actualiza(e))
          }
-         msj += Badminton.plantillaPersonas.pie
+         msj += BADMINTON.plantillaPersonas.pie
          Frontend.Article.actualizar("Listado de personas solo con su nombre", msj)
         }
     
@@ -204,7 +201,7 @@ Badminton.ordenaCampos = function(vector,campo){
 
 //Funciones para crear una table
 //Funcion para crear la cabecera de una table
-Badminton.plantillaPersonas.cabecera = `<table width="100%" class="listado-personas">
+BADMINTON.plantillaPersonas.cabecera = `<table width="100%" class="listado-personas">
                     <thead>
                         <th width="20%">Nombre</th>
                         <th width="20%">Apellidos</th>
@@ -215,7 +212,7 @@ Badminton.plantillaPersonas.cabecera = `<table width="100%" class="listado-perso
                     </thead>
                     <tbody>
     `;
-    Badminton.plantillaPersonas.cabeceraTodos = `<table width="100%" class="listado-personas">
+    BADMINTON.plantillaPersonas.cabeceraTodos = `<table width="100%" class="listado-personas">
     <thead>
         <th width="20%">Nombre</th>
         <th width="20%">Apellidos</th>
@@ -232,30 +229,30 @@ Badminton.plantillaPersonas.cabecera = `<table width="100%" class="listado-perso
     </thead>
     <tbody>
 `;
-Badminton.plantillaPersonas.pie = `        </tbody>
+BADMINTON.plantillaPersonas.pie = `        </tbody>
     </table>
     `;
 
 //Cuerpo de la tabla
-Badminton.plantillaPersonas.cuerpo = `
-    <tr title="${Badminton.plantillaTags.NOMBRE}">
-        <td>${Badminton.plantillaTags.NOMBRE}</td>
-        <td>${Badminton.plantillaTags.APELLIDOS}</td>
+BADMINTON.plantillaPersonas.cuerpo = `
+    <tr title="${BADMINTON.plantillaTags.NOMBRE}">
+        <td>${BADMINTON.plantillaTags.NOMBRE}</td>
+        <td>${BADMINTON.plantillaTags.APELLIDOS}</td>
         <td>
     </tr>
     `;
-    Badminton.plantillaPersonas.cuerpoTodas = `
-    <tr title="${Badminton.plantillaTagsTodos.NOMBRE}">
-        <td>${Badminton.plantillaTagsTodos.NOMBRE}</td>
-        <td>${Badminton.plantillaTagsTodos.APELLIDOS}</td>
-        <td>${Badminton.plantillaTagsTodos.fechaNacimiento}</td>
-        <td>${Badminton.plantillaTagsTodos.DIRECCION}</td> 
-        <td>${Badminton.plantillaTagsTodos.PESO}</td>
-        <td>${Badminton.plantillaTagsTodos.ALTURA}</td>
-        <td>${Badminton.plantillaTagsTodos.manoDominante}</td>
-        <td>${Badminton.plantillaTagsTodos.clubActual}</td>
-        <td>${Badminton.plantillaTagsTodos.nTorneosGanados}</td>
-        <td>${Badminton.plantillaTagsTodos.nTorneosjugados}</td>
+    BADMINTON.plantillaPersonas.cuerpoTodas = `
+    <tr title="${BADMINTON.plantillaTagsTodos.NOMBRE}">
+        <td>${BADMINTON.plantillaTagsTodos.NOMBRE}</td>
+        <td>${BADMINTON.plantillaTagsTodos.APELLIDOS}</td>
+        <td>${BADMINTON.plantillaTagsTodos.fechaNacimiento}</td>
+        <td>${BADMINTON.plantillaTagsTodos.DIRECCION}</td> 
+        <td>${BADMINTON.plantillaTagsTodos.PESO}</td>
+        <td>${BADMINTON.plantillaTagsTodos.ALTURA}</td>
+        <td>${BADMINTON.plantillaTagsTodos.manoDominante}</td>
+        <td>${BADMINTON.plantillaTagsTodos.clubActual}</td>
+        <td>${BADMINTON.plantillaTagsTodos.nTorneosGanados}</td>
+        <td>${BADMINTON.plantillaTagsTodos.nTorneosjugados}</td>
         <td>
     </tr>
     `;
@@ -266,12 +263,12 @@ Badminton.plantillaPersonas.cuerpo = `
 * @param {Persona} Persona Objeto con los datos de la persona que queremos escribir en el TR
 * @returns La plantilla del cuerpo de la tabla con los datos actualizados
 */
-Badminton.plantillaPersonas.actualiza = function (persona) {
-   return Badminton.sustituyeTags(this.cuerpo, persona)
+BADMINTON.plantillaPersonas.actualiza = function (persona) {
+   return BADMINTON.sustituyeTags(this.cuerpo, persona)
 }
 
-Badminton.plantillaPersonas.actualizaTodos = function (persona) {
-    return Badminton.sustituyeTagsTodos(this.cuerpoTodas, persona)
+BADMINTON.plantillaPersonas.actualizaTodos = function (persona) {
+    return BADMINTON.sustituyeTagsTodos(this.cuerpoTodas, persona)
  }
 
 /**
@@ -280,28 +277,28 @@ Badminton.plantillaPersonas.actualizaTodos = function (persona) {
  * @param {Persona} Persona Objeto con los datos de la persona que queremos escribir en el TR
  * @returns La plantilla del cuerpo de la tabla con los datos actualizados
  */
-Badminton.sustituyeTags = function (plantilla, persona) {
+BADMINTON.sustituyeTags = function (plantilla, persona) {
     return plantilla
-        .replace(new RegExp(Badminton.plantillaTags.NOMBRE, 'g'), persona.data.nombre)
-        .replace(new RegExp(Badminton.plantillaTags.APELLIDOS, 'g'), persona.data.apellidos)
-        .replace(new RegExp(Badminton.plantillaTags.APELLIDOS, 'g'), persona.data.apellidos)
+        .replace(new RegExp(BADMINTON.plantillaTags.NOMBRE, 'g'), persona.data.nombre)
+        .replace(new RegExp(BADMINTON.plantillaTags.APELLIDOS, 'g'), persona.data.apellidos)
+        .replace(new RegExp(BADMINTON.plantillaTags.APELLIDOS, 'g'), persona.data.apellidos)
 
 
 
 }
 
-Badminton.sustituyeTagsTodos = function (plantilla, persona) {
+BADMINTON.sustituyeTagsTodos = function (plantilla, persona) {
     return plantilla
-        .replace(new RegExp(Badminton.plantillaTagsTodos.NOMBRE, 'g'), persona.data.nombre)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.APELLIDOS, 'g'), persona.data.apellidos)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.fechaNacimiento, 'g'), persona.data.fechaNacimiento)        
-        .replace(new RegExp(Badminton.plantillaTagsTodos.DIRECCION, 'g'), persona.data.direccion)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.PESO, 'g'), persona.data.peso)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.ALTURA, 'g'), persona.data.altura)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.manoDominante, 'g'), persona.data.manoDominante)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.clubActual, 'g'), persona.data.clubActual)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.nTorneosGanados, 'g'), persona.data.nTorneosGanados)
-        .replace(new RegExp(Badminton.plantillaTagsTodos.nTorneosjugados, 'g'), persona.data.nTorneosJugados)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.NOMBRE, 'g'), persona.data.nombre)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.APELLIDOS, 'g'), persona.data.apellidos)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.fechaNacimiento, 'g'), persona.data.fechaNacimiento)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.DIRECCION, 'g'), persona.data.direccion)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.PESO, 'g'), persona.data.peso)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.ALTURA, 'g'), persona.data.altura)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.manoDominante, 'g'), persona.data.manoDominante)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.clubActual, 'g'), persona.data.clubActual)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.nTorneosGanados, 'g'), persona.data.nTorneosGanados)
+        .replace(new RegExp(BADMINTON.plantillaTagsTodos.nTorneosjugados, 'g'), persona.data.nTorneosJugados)
 }
 
 
@@ -310,12 +307,12 @@ Badminton.sustituyeTagsTodos = function (plantilla, persona) {
  * @param {función} callBackFn Función a la que se llamará una vez recibidos los datos.
  */
 
-Badminton.recupera = async function (callBackFn) {
+BADMINTON.recupera = async function (callBackFn) {
     let response = null
 
     // Intento conectar con el microservicio personas
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarPersonas"
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarPersonas"
         response = await fetch(url)
 
     } catch (error) {
@@ -331,12 +328,12 @@ Badminton.recupera = async function (callBackFn) {
         callBackFn(vectorPersonas.data)
     }
 }
-Badminton.recuperaTodos = async function (callBackFn, campo) {
+BADMINTON.recuperaTodos = async function (callBackFn, campo) {
     let response = null
 
     // Intento conectar con el microservicio personas
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarPersonas"
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarPersonas"
         response = await fetch(url)
 
     } catch (error) {
@@ -352,9 +349,9 @@ Badminton.recuperaTodos = async function (callBackFn, campo) {
         callBackFn(vectorPersonas.data, campo)
     }
 }
-Badminton.recuperaUna = async function (nombre, callBackFn) {
+BADMINTON.recuperaUna = async function (nombre, callBackFn) {
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarUna/" + nombre
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarUna/" + nombre
         const response = await fetch(url);
         if (response) {
             const persona = await response.json()
@@ -366,23 +363,23 @@ Badminton.recuperaUna = async function (nombre, callBackFn) {
     }
 }
 
-Badminton.personaTabla = function (persona){
-    return Badminton.plantillaPersonas.cabeceraTodos
-    + Badminton.plantillaPersonas.actualizaTodos(persona)
-    + Badminton.plantillaPersonas.pie;
+BADMINTON.personaTabla = function (persona){
+    return BADMINTON.plantillaPersonas.cabeceraTodos
+    + BADMINTON.plantillaPersonas.actualizaTodos(persona)
+    + BADMINTON.plantillaPersonas.pie;
 }
 
-Badminton.imprimeUna = function (persona){
+BADMINTON.imprimeUna = function (persona){
     if(persona!=null){
-        let msj = Badminton.personaTabla(persona)
+        let msj = BADMINTON.personaTabla(persona)
         Frontend.Article.actualizar("Muestra una persona", msj)
-        Badminton.almacenaUna(persona)
+        BADMINTON.almacenaUna(persona)
     }
 }
-Badminton.almacenaUna = function (persona) {
-    Badminton.personaMostrada = persona;
+BADMINTON.almacenaUna = function (persona) {
+    BADMINTON.personaMostrada = persona;
 }
-Badminton.mostrar = function (nombre){
+BADMINTON.mostrar = function (nombre){
     this.recuperaUna(nombre, this.imprimeUna)
 }
 
@@ -391,24 +388,24 @@ Badminton.mostrar = function (nombre){
 /**
  * Función principal para responder al evento de elegir la opción "Home"
  */
-Badminton.procesarHome = function () {
-    this.descargarRuta("/badminton/", this.mostrarHome);
+BADMINTON.procesarHome = function () {
+    this.descargarRuta("/BADMINTON/", this.mostrarHome);
 }
 
-Badminton.procesarListarNombres = function (){
-    Badminton.recupera(Badminton.imprimePersonas);
+BADMINTON.procesarListarNombres = function (){
+    BADMINTON.recupera(BADMINTON.imprimePersonas);
 }
 
-Badminton.procesarListarTodos = function (){
-    Badminton.recupera(Badminton.imprimeTodasPersonas);
+BADMINTON.procesarListarTodos = function (){
+    BADMINTON.recupera(BADMINTON.imprimeTodasPersonas);
 }
 
-Badminton.procesarCampoOrdenado = function (campo){
-    Badminton.recuperaTodos(Badminton.ordenaCampos, campo);
+BADMINTON.procesarCampoOrdenado = function (campo){
+    BADMINTON.recuperaTodos(BADMINTON.ordenaCampos, campo);
 }
 
-Badminton.procesarOrdenadoAlfabeticamente = function (nombre){
-    Badminton.recuperaTodos(Badminton.ordenaNombre, nombre);
+BADMINTON.procesarOrdenadoAlfabeticamente = function (nombre){
+    BADMINTON.recuperaTodos(BADMINTON.ordenaNombre, nombre);
 }
 
 
@@ -416,8 +413,8 @@ Badminton.procesarOrdenadoAlfabeticamente = function (nombre){
 /**
  * Función principal para responder al evento de elegir la opción "Acerca de"
  */
-Badminton.procesarAcercaDe = function () {
-    this.descargarRuta("/badminton/acercade", this.mostrarAcercaDe);
+BADMINTON.procesarAcercaDe = function () {
+    this.descargarRuta("/BADMINTON/acercade", this.mostrarAcercaDe);
 }
 
 

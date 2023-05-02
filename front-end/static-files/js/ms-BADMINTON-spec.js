@@ -43,34 +43,34 @@ describe("Badminton.mostrarHome: ", function () {
 
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Badminton.mostrarHome()
+            BADMINTON.mostrarHome()
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_HOME_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML).toBe(Badminton.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBadminton.innerHTML).toBe(BADMINTON.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Badminton.mostrarHome(23)
+            BADMINTON.mostrarHome(23)
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_HOME_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML).toBe(Badminton.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBadminton.innerHTML).toBe(BADMINTON.datosDescargadosNulos.mensaje)
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje",
         function () {
             // Objeto vacío
-            Badminton.mostrarHome({})
+            BADMINTON.mostrarHome({})
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_HOME_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML).toBe(Badminton.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBadminton.innerHTML).toBe(BADMINTON.datosDescargadosNulos.mensaje)
 
             // Objeto sin campo mensaje
-            Badminton.mostrarHome({ foo: "bar" })
+            BADMINTON.mostrarHome({ foo: "bar" })
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_HOME_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML).toBe(Badminton.datosDescargadosNulos.mensaje)
+            expect(elementoContenidoBadminton.innerHTML).toBe(BADMINTON.datosDescargadosNulos.mensaje)
         })
 
     it("muestra correctamente el título y el mensaje",
         function () {
-            Badminton.mostrarHome(datosDescargadosPruebaBadminton)
+            BADMINTON.mostrarHome(datosDescargadosPruebaBadminton)
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_HOME_BADMINTON)
             expect(elementoContenidoBadminton.innerHTML).toBe(datosDescargadosPruebaBadminton.mensaje)
         })
@@ -80,45 +80,45 @@ describe("Badminton.mostrarHome: ", function () {
 describe("Badminton.mostrarAcercaDe: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
-            Badminton.mostrarAcercaDe()
+            BADMINTON.mostrarAcercaDe()
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
         function () {
-            Badminton.mostrarAcercaDe(23)
+            BADMINTON.mostrarAcercaDe(23)
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
 
     it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje o autor o email o fecha ",
         function () {
             // Objeto vacío
-            Badminton.mostrarAcercaDe({})
+            BADMINTON.mostrarAcercaDe({})
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
 
             // Objeto sin campo mensaje
-            Badminton.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
+            BADMINTON.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo autor
-            Badminton.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
+            BADMINTON.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo email
-            Badminton.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
+            BADMINTON.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
             // Objeto sin campo fecha
-            Badminton.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
+            BADMINTON.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
-            expect(elementoContenidoBadminton.innerHTML.search(Badminton.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            expect(elementoContenidoBadminton.innerHTML.search(BADMINTON.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
         })
     it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
         function () {
-            Badminton.mostrarAcercaDe(datosDescargadosPruebaBadminton)
+            BADMINTON.mostrarAcercaDe(datosDescargadosPruebaBadminton)
             expect(elementoTituloBadminton.innerHTML).toBe(TITULO_ACERCA_DE_BADMINTON)
 
             // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
@@ -131,7 +131,7 @@ describe("Badminton.mostrarAcercaDe: ", function () {
 describe ("Badminton.ordenaCampos", function(){
     it("si le pasamos un valor nulo muestra los datos nulos",
     function (){
-        Badminton.ordenaCampos([])
+        BADMINTON.ordenaCampos([])
         expect(elementoTituloBadminton.innerHTML).toBe(LISTADO_NOMBRES_ORDENADOS)
     })
 
@@ -146,7 +146,7 @@ describe ("Badminton.ordenaCampos", function(){
 describe ("Badminton.ordenaNombre", function(){
     it("si le pasamos un valor nulo muestra los datos nulos",
     function (){
-        Badminton.ordenaNombre([])
+        BADMINTON.ordenaNombre([])
         expect(elementoTituloBadminton.innerHTML).toBe(LISTADO_NOMBRES_ORDENADOS)
     })
 
@@ -161,14 +161,14 @@ describe ("Badminton.ordenaNombre", function(){
 describe ("Badminton.imprimeTodasPersonas", function(){
     it("si le pasamos un valor nulo muestra los datos nulos",
     function (){
-        Badminton.imprimeTodasPersonas([])
+        BADMINTON.imprimeTodasPersonas([])
         expect(elementoTituloBadminton.innerHTML).toBe(LISTADO_NOMBRE_TODAS)
     })
 })
 describe ("Badminton.imprimePersonas", function(){
     it("si le pasamos un valor nulo muestra los datos nulos",
     function (){
-        Badminton.imprimePersonas([])
+        BADMINTON.imprimePersonas([])
         expect(elementoTituloBadminton.innerHTML).toBe(LISTADO_NOMBRE)
     })
 })
