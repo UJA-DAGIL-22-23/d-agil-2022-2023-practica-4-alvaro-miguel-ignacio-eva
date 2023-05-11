@@ -8,6 +8,8 @@
 /// Espacio de nombres
 let Frontend = {};
 
+Frontend.AcercaDeMensaje=``;
+
 
 /// Dirección del MS que funciona como API_GATEWAY
 Frontend.API_GATEWAY = "http://localhost:8001"
@@ -66,6 +68,11 @@ Frontend.aniadirClase = function (elemento, nombreClase) {
     elemento.setAttribute("class", clase)
 
     return this;
+}
+
+Frontend.mostrarAcercaDeTodos = function(){
+    Frontend.AcercaDeMensaje="";
+    
 }
 
 /**
