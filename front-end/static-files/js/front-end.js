@@ -93,3 +93,16 @@ Frontend.Article.actualizar = function (titulo, contenido) {
     document.getElementById( Frontend.ID_SECCION_PRINCIPAL_CONTENIDO ).innerHTML = contenido
     return this;
 }
+
+let ValorContraste = false;
+  Frontend.contraste = function() {
+    if(ValorContraste == false){
+        const body = document.querySelector('body');
+        body.setAttribute("style", "background-color: #000000; color: #ffffff;")
+        ValorContraste = true;
+    }else{
+        const body = document.querySelector('body');
+        body.setAttribute("style", "background-color: #ffffff; color: #000000;")
+        ValorContraste = false;
+    }
+  }

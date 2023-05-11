@@ -43,7 +43,7 @@ Rugby.crear = function ( num ) {
 }
 
 // Cabecera de la tabla
-Rugby.plantillaTablaPersonas.cabecera = `<table width="100%" class="styled-table">
+Rugby.plantillaTablaPersonas.cabecera = `<table width="100%" class="listado-personas">
                     <thead>
                         <th width="20%">ID</th>
                         <th width="20%">Nombre</th>
@@ -67,7 +67,7 @@ Rugby.plantillaTablaPersonas.pie = `        </tbody>
 
 
 
-Rugby.plantillaTablaPersonas.cabecera3 = `<table width="100%" class="styled-table">
+Rugby.plantillaTablaPersonas.cabecera3 = `<table width="100%" class="listado-personas">
                     <thead>
                         <th width="20%">Nombre</th>
                     </thead>
