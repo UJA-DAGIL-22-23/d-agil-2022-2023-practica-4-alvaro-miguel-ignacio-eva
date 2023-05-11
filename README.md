@@ -27,7 +27,8 @@
  
  ### Capturas tablero Trello 
 *  Trello Inicial: 
-<img src='/Trello/TrelloInicial.JPG' width='750'/>  
+<img src='/Trello/CapturaInicialTrello.jpg' width='750'/>  
+
 *  Trello Final: 
  
  ### Sprint planning 
