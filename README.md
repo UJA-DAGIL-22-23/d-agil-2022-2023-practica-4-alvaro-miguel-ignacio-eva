@@ -44,4 +44,23 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
 
  ### Funcionalidades hechas en el Sprint 
  
+ ## Historias de usuario implementadas
+ 
+ * HU 01-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva
+
+<img src='/HU 01 Quidditch.jpg' width='750'/>  
+
+ * HU 02-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro
+
+<img src='/HU 02 Rugby.jpg' width='750'/>  
+ 
+  * HU 03-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio
+
+<img src='/HU 03 Automovilismo.jpg' width='550'/>  
+
+ * HU 04-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel
+
+<img src='/HU 04 Badminton.jpg' width='750'/>  
+
+
  
