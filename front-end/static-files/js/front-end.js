@@ -73,6 +73,9 @@ Frontend.aniadirClase = function (elemento, nombreClase) {
 Frontend.mostrarAcercaDeTodos = function(){
     Frontend.AcercaDeMensaje="";
     BADMINTON.descargarRuta("/BADMINTON/acercade", this.mostrarAcercaDe)
+    Rugby.descargarRuta("/Rugby/acercade", this.mostrarAcercaDe)
+    Automovilismo.descargarRuta("/Automovilismo/acercade", this.mostrarAcercaDe)
+    Quidditch.descargarRuta("/Quidditch/acercade", this.mostrarAcercaDe)
 }
 
 Frontend.mostrarAcercaDe = function(datosDescargados){
