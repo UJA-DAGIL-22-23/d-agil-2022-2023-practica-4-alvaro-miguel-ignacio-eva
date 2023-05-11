@@ -106,3 +106,27 @@ let ValorContraste = false;
         ValorContraste = false;
     }
   }
+
+  Frontend.vNombres = []
+
+
+  Frontend.FusionVec = function(vector) {
+
+      vector.forEach(e => Frontend.vNombres.push(e.data.nombre))
+      Frontend.vNombres.sort((a, b) => a.localeCompare(b));
+      let msj = `<div>`
+      Frontend.vNombres.forEach(e => msj += `<p> ${e} </p>`)
+      msj += `</div>`
+      Frontend.Article.actualizar("Nombres jugadores de todas las bases de datos ordenados:", msj)
+
+  }
+
+
+  Frontend.TodosNombresOrdenados = function() {
+    Frontend.vNombres = []  
+      Quidditch.recupera(Frontend.FusionVec);
+      Rugby.recupera(Frontend.FusionVec);
+      BADMINTON.recupera(Frontend.FusionVec);
+      Automovilismo.recupera(Frontend.FusionVec);
+     
+  }
