@@ -49,19 +49,23 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
  
  * HU 01-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva
 
-<img src='/HU 01 Quidditch.jpg' width='750'/>  
+<img src='/Capturas criterios de validacion/HU 01 Quidditch.jpg' width='750'/>  
 
  * HU 02-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro
 
-<img src='/HU 02 Rugby.jpg' width='750'/>  
+<img src='/Capturas criterios de validacion/HU 02 Rugby.jpg' width='750'/>  
  
   * HU 03-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio
 
-<img src='/HU 03 Automovilismo.jpg' width='550'/>  
+<img src='/Capturas criterios de validacion/HU 03 Automovilismo.jpg' width='550'/>  
 
  * HU 04-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel
 
-<img src='/HU 04 Badminton.jpg' width='750'/>  
+<img src='/Capturas criterios de validacion/HU 04 Badminton.jpg' width='750'/>  
+
+ * HU 06-Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
+
+<img src='/Capturas criterios de validacion/HU-06 terminada.jpg' width='750'/>  
 
 
  
