@@ -128,5 +128,4 @@ let ValorContraste = false;
       Rugby.recupera(Frontend.FusionVec);
       BADMINTON.recupera(Frontend.FusionVec);
       Automovilismo.recupera(Frontend.FusionVec);
-     
   }

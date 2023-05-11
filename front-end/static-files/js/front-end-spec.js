@@ -138,3 +138,31 @@ describe("Frontend.quitarClase", function() {
     });
 
 });
+/*
+describe("Frontend.TodosNombresOrdenados: ", function () {
+    it("muestra todos los nombres de los jugadores de todos los deportes ordenados alfabéticamente",
+        function () {
+
+            expect(elementoTitulo.innerHTML).toBe("Nombres jugadores")
+            expect(elementoContenido.innerHTML.includes("Nombres Quidditch")).toBeTrue() 
+            expect(elementoContenido.innerHTML.includes("Nombres Rugby")).toBeTrue()
+            expect(elementoContenido.innerHTML.includes("Nombres Badminton")).toBeTrue()
+            expect(elementoContenido.innerHTML.includes("Nombres Automovilismo")).toBeTrue()
+        })
+})
+
+describe("Frontend.FusionVec: ", function () {
+    it("muestra todos los nombres de los jugadores de todos los deportes ordenados alfabéticamente",
+        function () {
+        //  let personas = .datos_personas
+        //    Frontend.FusionVec(personas)
+
+            expect(elementoTitulo.innerHTML).toBe("Nombres jugadores/equipos ordenados:")
+            for (let i = 0; i < d.datos_personas.length; ++i) {
+                expect(elementoContenido.innerHTML.includes(personas[i].data.nombre)).toBeTrue()
+            }
+        })
+})
+
+*/
+
