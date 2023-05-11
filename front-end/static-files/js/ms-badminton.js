@@ -315,7 +315,7 @@ Badminton.recupera = async function (callBackFn) {
 
     // Intento conectar con el microservicio personas
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarPersonas"
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarPersonas"
         response = await fetch(url)
 
     } catch (error) {
@@ -336,7 +336,7 @@ Badminton.recuperaTodos = async function (callBackFn, campo) {
 
     // Intento conectar con el microservicio personas
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarPersonas"
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarPersonas"
         response = await fetch(url)
 
     } catch (error) {
@@ -345,7 +345,7 @@ Badminton.recuperaTodos = async function (callBackFn, campo) {
         //throw error
     }
 
-    // Muestro todas las persoans que se han descargado
+    // Muestro todas las personas que se han descargado
     let vectorPersonas = null
     if (response) {
         vectorPersonas = await response.json()
@@ -354,7 +354,7 @@ Badminton.recuperaTodos = async function (callBackFn, campo) {
 }
 Badminton.recuperaUna = async function (nombre, callBackFn) {
     try {
-        const url = Frontend.API_GATEWAY + "/badminton/listarUna/" + nombre
+        const url = Frontend.API_GATEWAY + "/BADMINTON/listarUna/" + nombre
         const response = await fetch(url);
         if (response) {
             const persona = await response.json()
@@ -392,7 +392,7 @@ Badminton.mostrar = function (nombre){
  * Función principal para responder al evento de elegir la opción "Home"
  */
 Badminton.procesarHome = function () {
-    this.descargarRuta("/badminton/", this.mostrarHome);
+    this.descargarRuta("/BADMINTON/", this.mostrarHome);
 }
 
 Badminton.procesarListarNombres = function (){
@@ -417,7 +417,7 @@ Badminton.procesarOrdenadoAlfabeticamente = function (nombre){
  * Función principal para responder al evento de elegir la opción "Acerca de"
  */
 Badminton.procesarAcercaDe = function () {
-    this.descargarRuta("/badminton/acercade", this.mostrarAcercaDe);
+    this.descargarRuta("/BADMINTON/acercade", this.mostrarAcercaDe);
 }
 
 
