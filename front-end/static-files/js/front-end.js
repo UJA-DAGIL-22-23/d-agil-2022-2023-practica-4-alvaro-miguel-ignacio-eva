@@ -72,7 +72,30 @@ Frontend.aniadirClase = function (elemento, nombreClase) {
 
 Frontend.mostrarAcercaDeTodos = function(){
     Frontend.AcercaDeMensaje="";
-    
+    BADMINTON.descargarRuta("/BADMINTON/acercade", this.mostrarAcercaDe)
+}
+
+Frontend.mostrarAcercaDe = function(datosDescargados){
+    datosDescargados = datosDescargados || this.datosDescargadosNulos
+    // Si datos descargados NO es un objeto 
+    if (typeof datosDescargados !== "object") datosDescargados = this.datosDescargadosNulos
+    // Si datos descargados NO contiene los campos mensaje, autor, o email
+    if (typeof datosDescargados.mensaje === "undefined" ||
+        typeof datosDescargados.autor === "undefined" ||
+        typeof datosDescargados.email === "undefined" ||
+        typeof datosDescargados.fecha === "undefined"
+    ) datosDescargados = this.datosDescargadosNulos
+    const mensajeAMostrar = `<div>
+    <p>${datosDescargados.mensaje}</p>
+    <ul>
+        <li><b>Autor/a</b>: ${datosDescargados.autor}</li>
+        <li><b>E-mail</b>: ${datosDescargados.email}</li>
+        <li><b>Fecha</b>: ${datosDescargados.fecha}</li>
+    </ul>
+    </div>
+    `;
+   Frontend.AcercaDeMsj += mensajeAMostrar;
+   Frontend.Article.actualizar("Acerca De", Frontend.AcercaDeMsj);
 }
 
 /**
