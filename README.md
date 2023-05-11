@@ -22,8 +22,25 @@
  ## Incremento: 
  
  ### Fechas 
+* Fecha inicial: 24/04/2023
+ * Fecha Final: 
+ 
  ### Capturas tablero Trello 
+*  Trello Inicial: 
+*  Trello Final: 
+ 
  ### Sprint planning 
+ 
+Una vez realizada la reunión el día 24/04/2023, hemos seleccionado qué podemos hacer en este incremento y cómo vamos a hacerlo. 
+
+Las siguientes historias de usuario son la meta para terminar antes del 19/05/2023:
+
+* HU01, HU02, HU03, HU04, HU06, HU07, HU08, HU09, HU10 y HU11
+
+También en esta reunión hemos hablado acerca de cómo vamos a conseguir terminar el sprint exitosamente. Hemos decidido dividirnos las tareas entre todos los compañeros, cada uno ha elegido cuál se veía capaz de hacer, además hemos decidido que prácticamente por cada historia de usuario vamos a usar una rama que después fusionaremos con el main y así evitar conflictos al usar todos la misma rama.
+
+Por último, hemos creado un grupo de wasap para hablar diariamente sobre las dificultades que podemos tener o simplemente para poder ponernos al día de forma breve. Asimismo, una vez por semana quedamos presencialmente para poder trabajar en un mismo espacio presencialmente para poder animarnos. 
+
  ### Funcionalidades hechas en el Sprint 
  
  
