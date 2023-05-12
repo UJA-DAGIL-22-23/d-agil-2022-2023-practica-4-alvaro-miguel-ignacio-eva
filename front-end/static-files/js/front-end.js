@@ -5,7 +5,7 @@
  * @date 06-feb-2023
  */
 
-/// Espacio de nombres
+
 let Frontend = {};
 let msj = ``;
 
@@ -21,6 +21,7 @@ Frontend.CLASS_OCULTAR = "ocultar"
 Frontend.ID_SECCION_PRINCIPAL = "seccion-principal"
 Frontend.ID_SECCION_PRINCIPAL_TITULO = "seccion-principal-titulo"
 Frontend.ID_SECCION_PRINCIPAL_CONTENIDO = "seccion-principal-contenido"
+
 
 
 /// Objeto Article dentro Frontend para tratar con el contenido del elemento Article del DOM
@@ -120,8 +121,8 @@ Frontend.burcarNombresDeporte = function(){
     Rugby.recuperaHU09(Frontend.datosDeportistas);
      Frontend.deporte="Quidditch";
      Quidditch.recuperaHU09(Frontend.datosDeportistas);
-    //Frontend.deporte="Automovilismo";
-  //  Automovilismo.recuperaHU09(Frontend.datosDeportistas);
+    Frontend.deporte="Automovilismo";
+    Automovilismo.recuperaHU09(Frontend.datosDeportistas2);
     Frontend.deporte="BADMINTON";
     BADMINTON.recuperaHU09(Frontend.datosDeportistas);
 
@@ -135,10 +136,11 @@ Frontend.burcarNombresDeporte = function(){
             <button onclick = "javascript:Frontend.buscarSiCadenaEnNombre();"> Buscando</button>
             </div>`;
 
-    Frontend.Article.actualizar("busco jugadores ", msj)
+    Frontend.Article.actualizar("busco jugadores", msj)
 
 
 }
+
 Frontend.buscarSiCadenaEnNombre = texto => {
      texto=document.getElementById("id_Texto").value
     let msj = ``;
@@ -162,9 +164,19 @@ Frontend.buscarSiCadenaEnNombre = texto => {
 }
 
 Frontend.datosDeportistas = function (vector , deporte ){
-      vector.forEach (element => Frontend.vectorSoloNombres.push(element.data.nombre))
-      vector.forEach(element => Frontend.vectorNombreDeporte.nombre.push(element.data.nombre) )
-      vector.forEach(element => Frontend.vectorNombreDeporte.deporte.push(deporte))
+    vector.forEach (element => Frontend.vectorSoloNombres.push(element.data.nombre))
+    vector.forEach(element => Frontend.vectorNombreDeporte.nombre.push(element.data.nombre) )
 
+    vector.forEach(element => Frontend.vectorNombreDeporte.deporte.push(deporte))
+
+
+}
+
+
+
+Frontend.datosDeportistas2 = function (vector , deporte ){
+    vector.forEach (element => Frontend.vectorSoloNombres.push(element.data.nombre))
+    vector.forEach(element => Frontend.vectorNombreDeporte.nombre.push(element.data.Nombre) )
+    vector.forEach(element => Frontend.vectorNombreDeporte.deporte.push(deporte))
 
 }

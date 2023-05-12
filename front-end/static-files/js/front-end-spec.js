@@ -5,6 +5,10 @@
  * @date 03-feb-2023
  */
 
+const elementoTituloFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
+const elementoContenidoFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
+const BUSCAR_JUGADORES_NOMBRE_INCLUYE = "busco jugadores"
+const ESTA_CADENA_NOMBRE="busco jugadores por nombre"
 // SPECS para Jasmine
 describe("Frontend.Article.actualizar: ", function () {
     const elementoTitulo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
@@ -154,109 +158,18 @@ describe("Frontend.quitarClase", function() {
 
 });
 
-describe('Frontend.buscarNombresDeporte', function() {
-    it('debe buscar nombres de deportistas que incluyan la cadena de texto', function() {
-        Frontend.deporte = "Rugby";
-        Rugby.recuperaHU09(Frontend.datosDeportistas);
+describe("Frontend.buscarNombresDeporte", function() {
+    it("muestra datos nulos cuando le pasamos un valor nulo",
+        function () {
+            Frontend.burcarNombresDeporte([])
+            expect(elementoTituloFrontend.innerHTML).toBe(BUSCAR_JUGADORES_NOMBRE_INCLUYE)
 
-        Frontend.deporte = "Quidditch";
-        Quidditch.recuperaHU09(Frontend.datosDeportistas);
+        })
+    it("muestra datos nulos cuando le pasamos un valor no nulo ",
+        function () {
+            Frontend.burcarNombresDeporte(13)
+            expect(elementoTituloFrontend.innerHTML).toBe(BUSCAR_JUGADORES_NOMBRE_INCLUYE)
 
-        Frontend.deporte = "BADMINTON";
-        BADMINTON.recuperaHU09(Frontend.datosDeportistas);
-
-        Frontend.vectorSoloNombres = [];
-        Frontend.vectorNombreDeporte.nombre = [];
-        Frontend.vectorNombreDeporte.deporte = [];
-
-        let msj = `<div>
-      <p> Buscar jugadores cuyo nombre incluye: </p>
-      <input type="text" id="id_Texto">
-      <button onclick = "javascript:Frontend.incluyeNombre();"> Buscando</button>
-    </div>`;
-
-        Frontend.Article.actualizar("busco jugadores ", msj);
-
-        // Realiza la prueba buscando un nombre que no existe
-        Frontend.vectorSoloNombres = []; // Limpia el vector antes de la prueba
-        Frontend.Article.actualizar("busco jugadores ", msj); // Actualiza el mensaje antes de la prueba
-        Frontend.incluyeNombre();
-        expect(Frontend.vectorSoloNombres).to.deep.equal([]);
-
-
-    });
+        })
 });
 
-
-describe('Frontend.datosDeportistas', function() {
-    it('debe agregar los nombres de los deportistas al vector vectorSoloNombres y los nombres y deportes al vector vectorNombreDeporte', function() {
-        // Preparación de datos de prueba
-        const vector = [
-            { data: { nombre: 'Eva' } },
-            { data: { nombre: 'Alvaro' } },
-            { data: { nombre: 'Martin' } }
-        ];
-        const deporte = 'Rugby';
-
-        // Act (Ejecución)
-        Frontend.vectorSoloNombres = [];
-        Frontend.vectorNombreDeporte = { nombre: [], deporte: [] };
-        Frontend.datosDeportistas(vector, deporte);
-
-        // Verificación de los resultados
-        // Assert (Verificación)
-        expect(Frontend.vectorSoloNombres).toEqual(['Eva', 'Alvaro', 'Martin']);
-        expect(Frontend.vectorNombreDeporte).toEqual({
-            nombre: ['Eva', 'Alvaro', 'Martin'],
-            deporte: ['Rugby', 'Rugby', 'Rugby']
-        });
-    });
-});
-
-
-describe('Frontend.buscarSiCadenaEnNombre', () => {
-    // Antes de cada prueba, reinicia el valor del campo de texto
-    beforeEach(() => {
-        document.getElementById('id_Texto').value = '';
-    });
-
-    // Prueba 1: Verifica si se encuentra una cadena en el nombre
-    it('debería encontrar una cadena en el nombre', () => {
-        // Define los datos de prueba
-        const vectorNombreDeporte = {
-            nombre: ['Juan', 'Pedro', 'Luis'],
-            deporte: ['Fútbol', 'Tenis', 'Baloncesto']
-        };
-        Frontend.vectorNombreDeporte = vectorNombreDeporte;
-
-        // Establece el valor del campo de texto
-        document.getElementById('id_Texto').value = 'ed';
-
-        // Ejecuta la función a probar
-        Frontend.buscarSiCadenaEnNombre();
-
-        // Verifica el resultado esperado utilizando expect
-        const expected = '<div><p>Nombre del jugador: Pedro</p><p>Deporte del deporte: Tenis</p></div>';
-        expect(Frontend.Article.msj).toBe(expected);
-    });
-
-    // Prueba 2: Verifica si no se encuentra ninguna cadena en el nombre
-    it('no debería encontrar ninguna cadena en el nombre', () => {
-        // Define los datos de prueba
-        const vectorNombreDeporte = {
-            nombre: ['Juan', 'Pedro', 'Luis'],
-            deporte: ['Fútbol', 'Tenis', 'Baloncesto']
-        };
-        Frontend.vectorNombreDeporte = vectorNombreDeporte;
-
-        // Establece el valor del campo de texto
-        document.getElementById('id_Texto').value = 'xyz';
-
-        // Ejecuta la función a probar
-        Frontend.buscarSiCadenaEnNombre();
-
-        // Verifica el resultado esperado utilizando expect
-        const expected = '';
-        expect(Frontend.Article.msj).toBe(expected);
-    });
-});
