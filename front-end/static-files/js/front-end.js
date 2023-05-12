@@ -121,11 +121,23 @@ let ValorContraste = false;
 
   }
 
+//Segunda funcion implementada para procesar los nombres de ms-Automovilismo
+  Frontend.FusionVec2 = function(vector) {
+
+    vector.forEach(e => Frontend.vNombres.push(e.data.Nombre))
+    Frontend.vNombres.sort((a, b) => a.localeCompare(b));
+    let msj = `<div>`
+    Frontend.vNombres.forEach(e => msj += `<p> ${e} </p>`)
+    msj += `</div>`
+    Frontend.Article.actualizar("Nombres jugadores de todas las bases de datos ordenados:", msj)
+
+}
+
 
   Frontend.TodosNombresOrdenados = function() {
     Frontend.vNombres = []  
       Quidditch.recupera(Frontend.FusionVec);
       Rugby.recupera(Frontend.FusionVec);
-      BADMINTON.recupera(Frontend.FusionVec);
-      Automovilismo.recupera(Frontend.FusionVec);
+      BADMINTON.recuperaTodos(Frontend.FusionVec);
+      Automovilismo.recupera(Frontend.FusionVec2);
   }

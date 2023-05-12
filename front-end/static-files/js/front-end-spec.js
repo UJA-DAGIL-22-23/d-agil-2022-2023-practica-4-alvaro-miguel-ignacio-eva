@@ -137,8 +137,7 @@ describe("Frontend.quitarClase", function() {
         expect(elemento.classList.contains("clase1")).toBeFalsy();
     });
 
-});
-/*
+});/*
 describe("Frontend.TodosNombresOrdenados: ", function () {
     it("muestra todos los nombres de los jugadores de todos los deportes ordenados alfabéticamente",
         function () {
@@ -150,7 +149,8 @@ describe("Frontend.TodosNombresOrdenados: ", function () {
             expect(elementoContenido.innerHTML.includes("Nombres Automovilismo")).toBeTrue()
         })
 })
-
+*/
+/*
 describe("Frontend.FusionVec: ", function () {
     it("muestra todos los nombres de los jugadores de todos los deportes ordenados alfabéticamente",
         function () {
@@ -163,6 +163,6 @@ describe("Frontend.FusionVec: ", function () {
             }
         })
 })
-
 */
+
 
