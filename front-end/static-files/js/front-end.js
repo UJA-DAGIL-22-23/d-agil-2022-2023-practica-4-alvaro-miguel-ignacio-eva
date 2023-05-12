@@ -5,8 +5,9 @@
  * @date 06-feb-2023
  */
 
-/// Espacio de nombres
+
 let Frontend = {};
+let msj = ``;
 
 Frontend.AcercaDeMensaje=``;
 
@@ -24,15 +25,22 @@ Frontend.ID_SECCION_PRINCIPAL_TITULO = "seccion-principal-titulo"
 Frontend.ID_SECCION_PRINCIPAL_CONTENIDO = "seccion-principal-contenido"
 
 
+
 /// Objeto Article dentro Frontend para tratar con el contenido del elemento Article del DOM
 Frontend.Article = {}
-
 
 
 /// Objeto dentro Frontend para tratar con el contenido de Article
 Frontend.Article = {}
 
+///Atributos globales
+Frontend.vectorNombreDeporte = {
+    nombre: [],
+    deporte: []
+}
 
+Frontend.vectorSoloNombres = []
+Frontend.deporte= ""
 /**
  * Quita a un elemento del cual se pasa él mismo o su ID la clase indicada por nombreClase
  * @param {string} elemento Elemento o id del elemento
@@ -139,3 +147,69 @@ let ValorContraste = false;
         ValorContraste = false;
     }
   }
+
+
+Frontend.burcarNombresDeporte = function(){
+    Frontend.deporte="Rugby";
+    Rugby.recuperaHU09(Frontend.datosDeportistas);
+     Frontend.deporte="Quidditch";
+     Quidditch.recuperaHU09(Frontend.datosDeportistas);
+    Frontend.deporte="Automovilismo";
+    Automovilismo.recuperaHU09(Frontend.datosDeportistas2);
+    Frontend.deporte="BADMINTON";
+    BADMINTON.recuperaHU09(Frontend.datosDeportistas);
+
+    Frontend.vectorSoloNombres=[]
+    Frontend.vectorNombreDeporte.nombre =[]
+    Frontend.vectorNombreDeporte.deporte = []
+
+    let msj = `<div>
+            <p> Buscar jugadores cuyo nombre incluye: </p>
+            <input type="text" id="id_Texto">
+            <button onclick = "javascript:Frontend.buscarSiCadenaEnNombre();"> Buscando</button>
+            </div>`;
+
+    Frontend.Article.actualizar("busco jugadores", msj)
+
+
+}
+
+Frontend.buscarSiCadenaEnNombre = texto => {
+     texto=document.getElementById("id_Texto").value
+    let msj = ``;
+    console.log(Frontend.vectorNombreDeporte.nombre.length);
+
+    for(var i= 0; i<Frontend.vectorNombreDeporte.nombre.length; i++){
+          let nombre = Frontend.vectorNombreDeporte.nombre[i];
+          let deporte = Frontend.vectorNombreDeporte.deporte[i];
+        console.log(nombre);
+        console.log(deporte);
+          if(nombre.includes(texto)){
+              console.log(texto);
+               msj += `<div>
+                        <p>Nombre del jugador: ${nombre}</p>
+                        <p>Deporte del deporte: ${deporte}</p>
+                        </div>`;
+
+          }
+      }
+    Frontend.Article.actualizar("busco jugadores por nombre", msj)
+}
+
+Frontend.datosDeportistas = function (vector , deporte ){
+    vector.forEach (element => Frontend.vectorSoloNombres.push(element.data.nombre))
+    vector.forEach(element => Frontend.vectorNombreDeporte.nombre.push(element.data.nombre) )
+
+    vector.forEach(element => Frontend.vectorNombreDeporte.deporte.push(deporte))
+
+
+}
+
+
+
+Frontend.datosDeportistas2 = function (vector , deporte ){
+    vector.forEach (element => Frontend.vectorSoloNombres.push(element.data.nombre))
+    vector.forEach(element => Frontend.vectorNombreDeporte.nombre.push(element.data.Nombre) )
+    vector.forEach(element => Frontend.vectorNombreDeporte.deporte.push(deporte))
+
+}

@@ -5,6 +5,10 @@
  * @date 03-feb-2023
  */
 
+const elementoTituloFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
+const elementoContenidoFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
+const BUSCAR_JUGADORES_NOMBRE_INCLUYE = "busco jugadores"
+const ESTA_CADENA_NOMBRE="busco jugadores por nombre"
 // SPECS para Jasmine
 describe("Frontend.Article.actualizar: ", function () {
     const elementoTitulo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
@@ -138,3 +142,34 @@ describe("Frontend.quitarClase", function() {
     });
 
 });
+
+describe("Frontend.quitarClase", function() {
+    it("debería quitar la clase indicada del elemento", function() {
+        // Creamos el elemento y le agregamos una clase
+        const elemento = document.createElement("div");
+        elemento.classList.add("clase1");
+
+        // Ejecutamos la función para quitar la clase
+        Frontend.quitarClase(elemento, "clase1");
+
+        // Comprobamos que la clase fue eliminada
+        expect(elemento.classList.contains("clase1")).toBeFalsy();
+    });
+
+});
+
+describe("Frontend.buscarNombresDeporte", function() {
+    it("muestra datos nulos cuando le pasamos un valor nulo",
+        function () {
+            Frontend.burcarNombresDeporte([])
+            expect(elementoTituloFrontend.innerHTML).toBe(BUSCAR_JUGADORES_NOMBRE_INCLUYE)
+
+        })
+    it("muestra datos nulos cuando le pasamos un valor no nulo ",
+        function () {
+            Frontend.burcarNombresDeporte(13)
+            expect(elementoTituloFrontend.innerHTML).toBe(BUSCAR_JUGADORES_NOMBRE_INCLUYE)
+
+        })
+});
+

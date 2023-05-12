@@ -13,6 +13,7 @@ const app = require('../server');
 /**
  * Test para las rutas "estáticas": / y /acerdade
  */
+
 describe('Servidor FRONT-END:', () => {
   describe('Cualquier ruta devuelve index.html', () => {
     it('Prueba ruta /', (done) => {
@@ -22,7 +23,7 @@ describe('Servidor FRONT-END:', () => {
         .expect(function (res) {
           //console.log( res.text ); // Para comprobar qué contiene exactamente res.text
           assert(res.hasOwnProperty('text'));
-          assert(res.text.search("<h1>Aplicación Microservicios Plantilla</h1>")>=0)
+          assert(res.text.search(" <h1>Aplicación Microservicios Deportes</h1>")>=0)
 
         })
         .end((error) => { error ? done.fail(error) : done() })
@@ -34,7 +35,7 @@ describe('Servidor FRONT-END:', () => {
           .expect(function (res) {
             //console.log( res.text ); // Para comprobar qué contiene exactamente res.text
             assert(res.hasOwnProperty('text'));
-            assert(res.text.search("<h1>Aplicación Microservicios Plantilla</h1>")>=0)
+            assert(res.text.search(" <h1>Aplicación Microservicios Deportes</h1>")>=0)
   
           })
           .end((error) => { error ? done.fail(error) : done() })
@@ -45,7 +46,7 @@ describe('Servidor FRONT-END:', () => {
               .expect(200)
               .expect('Content-Type', /html/)
               .expect(function (res) {
-                  assert(res.text.search("<h1>Aplicación Microservicios Plantilla</h1>")>=0)
+                  assert(res.text.search(" <h1>Aplicación Microservicios Deportes</h1>")>=0)
 
               })
               .end((error) => { error ? done.fail(error) : done() })
@@ -57,7 +58,7 @@ describe('Servidor FRONT-END:', () => {
               .expect('Content-Type', /html/)
               .expect(function (res) {
                //   console.log( res.text ); // Para comprobar qué contiene exactamente res.text
-                  assert(res.text.search("<h1>Aplicación Microservicios Plantilla</h1>")>=0)
+                  assert(res.text.search(" <h1>Aplicación Microservicios Deportes</h1>")>=0)
 
               })
               .end((error) => { error ? done.fail(error) : done() })
