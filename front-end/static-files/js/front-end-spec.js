@@ -1,15 +1,22 @@
 /**
  * @file front-end-spec.js
- * @description Fichero TDD para probar to do lo relacionado con MS Quidditch en el front-end
+ * @description Fichero TDD para probar to do lo relacionado con MS Frontend en el front-end
  * @author Víctor M. Rivas <vrivas@ujaen.es>
  * @date 03-feb-2023
  */
-
+const TITULO_ACERCA_DE_Frontend = "Acerca De"
+const TITULO_IMPRIME_TODOS = "Nombres jugadores de todas las bases de datos:"
 const elementoTituloFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
 const elementoContenidoFrontend = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
 const BUSCAR_JUGADORES_NOMBRE_INCLUYE = "busco jugadores"
 const ESTA_CADENA_NOMBRE="busco jugadores por nombre"
 // SPECS para Jasmine
+const datosDescargadosPrueba_Todos = {
+    mensaje: "Mensaje de prueba descargado",
+    autor: "Prueba de autor",
+    email: "Prueba de email",
+    fecha: "00/00/0000"
+}
 describe("Frontend.Article.actualizar: ", function () {
     const elementoTitulo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
     const elementoContenido = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
@@ -65,7 +72,55 @@ describe("Frontend.Article.actualizar: ", function () {
         })
 
 })
+describe("Frontend.imprimeNombres: ", function() {
+    it("Mostrar datos nulos cuando le pasamos vector nulo", 
+        function() {
+            Frontend.imprimeNombres([])
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_IMPRIME_TODOS)
+    })
+   
+})
+describe("Frontend.imprimeNombres2: ", function() {
+    it("Mostrar datos nulos cuando le pasamos vector nulo", 
+        function() {
+            Frontend.imprimeNombres([])
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_IMPRIME_TODOS)
+    })
+   
+})
 
+/*
+describe("Frontend.imprimeMuchasPersonas: ", function () {
+    it("muestra datos nulos cuando le pasamos un valor nulo",
+        function () {
+            Frontend.imprimeMuchasPersonas([])
+            expect(elementoTituloFrontend.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_Frontend)
+
+        })
+    it("muestra datos nulos cuando le pasamos un valor no nulo ",
+        function () {
+            Frontend.imprimeMuchasPersonas(15)
+            expect(elementoTituloFrontend.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_Frontend)
+
+        })
+})
+*/
+/*
+describe("Frontend.imprimeOrdenadorAlfabeticamente: ", function (){
+    it("muestra datos nulos cuando le pasamos un valor nulo",
+        function () {
+            Frontend.imprimeOrdenadorAlfabeticamente([])
+            expect(elementoTituloFrontend.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_ALFABETICAMENTE_Frontend)
+
+        })
+    it("muestra datos nulos cuando le pasamos un valor no nulo ",
+        function () {
+            Frontend.imprimeOrdenadorAlfabeticamente(15)
+            expect(elementoTituloFrontend.innerHTML).toBe(LISTADO_IMPRIMIR_MUCHAS_PERSONAS_ALFABETICAMENTE_Frontend)
+
+        })
+})
+*/
 describe("Frontend.Article.mostrar", function() {
 
 

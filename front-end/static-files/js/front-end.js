@@ -24,10 +24,18 @@ Frontend.ID_SECCION_PRINCIPAL = "seccion-principal"
 Frontend.ID_SECCION_PRINCIPAL_TITULO = "seccion-principal-titulo"
 Frontend.ID_SECCION_PRINCIPAL_CONTENIDO = "seccion-principal-contenido"
 
+Frontend.datosDescargadosNulos = {
+    mensaje: "Datos Descargados No válidos",
+    autor: "Miguel Angel Carrasco Infante",
+    email: "maci0002@red.ujaen.es",
+    fecha: "13/08/01"
+}
+
 
 
 /// Objeto Article dentro Frontend para tratar con el contenido del elemento Article del DOM
 Frontend.Article = {}
+
 
 
 /// Objeto dentro Frontend para tratar con el contenido de Article
@@ -38,6 +46,7 @@ Frontend.vectorNombreDeporte = {
     nombre: [],
     deporte: []
 }
+Frontend.vAux = []
 
 Frontend.vectorSoloNombres = []
 Frontend.deporte= ""
@@ -85,6 +94,34 @@ Frontend.mostrarAcercaDeTodos = function(){
     Automovilismo.descargarRuta("/Automovilismo/acercade", this.mostrarAcercaDe)
     Quidditch.descargarRuta("/Quidditch/acercade", this.mostrarAcercaDe)
 }
+
+Frontend.mostrarNombresHu06 = function() {
+    Frontend.AcercaDeMensaje="";
+    BADMINTON.recupera(Frontend.imprimeNombres);
+    Rugby.recupera(Frontend.imprimeNombres);
+    Automovilismo.recupera(Frontend.imprimeNombres2);
+    Quidditch.recupera(Frontend.imprimeNombres);
+}
+
+Frontend.imprimeNombres = function(vector) {
+    vector.forEach(e => Frontend.vAux.push(e.data.nombre))
+    let msj = `<div>`
+    Frontend.vAux.forEach(e => msj += `<p> ${e} </p>`)
+    msj += `</div>`
+    Frontend.Article.actualizar("Nombres jugadores de todas las bases de datos:", msj)
+
+  }
+  Frontend.imprimeNombres2 = function(vector) {
+
+    vector.forEach(e => Frontend.vAux.push(e.data.Nombre))
+    let msj = `<div>`
+    Frontend.vAux.forEach(e => msj += `<p> ${e} </p>`)
+    msj += `</div>`
+    Frontend.Article.actualizar("Nombres jugadores de todas las bases de datos ordenados:", msj)
+
+}
+  
+
 
 Frontend.mostrarAcercaDe = function(datosDescargados){
     datosDescargados = datosDescargados || this.datosDescargadosNulos
