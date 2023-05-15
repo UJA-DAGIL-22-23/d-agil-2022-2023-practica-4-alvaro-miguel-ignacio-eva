@@ -65,7 +65,13 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
 
  * HU 06-Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 
-<img src='/Capturas criterios de validacion/HU-06 terminada.jpg' width='750'/>  
+<img src='/Capturas criterios de validacion/HU-06 terminada.jpg' width='750'/> 
+
+ * HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.”
+ 
+ ![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/e1fc5865-3233-4f76-89cb-5cce6a92d9a1)
+![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/89883b94-33e3-412f-9d46-10efeba86213)
+
 
 
  
