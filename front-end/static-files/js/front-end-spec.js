@@ -89,6 +89,58 @@ describe("Frontend.imprimeNombres2: ", function() {
    
 })
 
+describe("Frontend.mostrarAcercaDe: ", function () {
+    it("muestra datos nulos cuando le pasamos un valor nulo",
+        function () {
+            Frontend.mostrarAcercaDe()
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+            expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+        })
+
+    it("muestra datos nulos cuando le pasamos un valor que no es un objeto",
+        function () {
+            Frontend.mostrarAcercaDe(23)
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+            expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+        })
+
+    it("muestra datos nulos cuando le pasamos un objeto que no tiene campo mensaje o autor o email o fecha ",
+        function () {
+            // Objeto vacío
+            Frontend.mostrarAcercaDe({})
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+            expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+
+            // Objeto sin campo mensaje
+            Frontend.mostrarAcercaDe({ autor: "un autor", email: "un email", fecha: "una fecha" })
+           expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+           expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            // Objeto sin campo autor
+            Frontend.mostrarAcercaDe({ mensaje: "un mensaje", email: "un email", fecha: "una fecha" })
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+            expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            // Objeto sin campo email
+            Frontend.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", fecha: "una fecha" })
+          expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+           expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+            // Objeto sin campo fecha
+            Frontend.mostrarAcercaDe({ mensaje: "un mensaje", autor: "un autor", email: "un email" })
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+           expect(elementoContenidoFrontend.innerHTML.search(Frontend.datosDescargadosNulos.mensaje) >= 0).toBeTrue()
+        })
+    it("muestra correctamente el título y el mensaje conteniendo el autor, el email y la fecha",
+        function () {
+            Frontend.mostrarAcercaDe(datosDescargadosPrueba_Todos)
+            expect(elementoTituloFrontend.innerHTML).toBe(TITULO_ACERCA_DE_Frontend)
+
+            // Comprobamos que al buscar el autor, el email y la fecha de prueba los encuentra dentro del contenido del article
+          expect(elementoContenidoFrontend.innerHTML.search(datosDescargadosPrueba_Todos.autor) >= 0).toBeTrue()
+            expect(elementoContenidoFrontend.innerHTML.search(datosDescargadosPrueba_Todos.email) >= 0).toBeTrue()
+            expect(elementoContenidoFrontend.innerHTML.search(datosDescargadosPrueba_Todos.fecha) >= 0).toBeTrue()
+        })
+
+})
+
 /*
 describe("Frontend.imprimeMuchasPersonas: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
