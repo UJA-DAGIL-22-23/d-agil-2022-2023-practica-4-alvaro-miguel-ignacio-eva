@@ -7,6 +7,8 @@
 
 "use strict";
 
+
+
 /// Creo el espacio de nombres
 let Automovilismo = {};
 
@@ -135,6 +137,8 @@ Automovilismo.recupera = async function (callBackFn,campo) {
  * Función principal para mostrar los datos enviados por la ruta "home" de MS Plantilla
  */
 Automovilismo.mostrarHome = function (datosDescargados) {
+
+
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
 
@@ -151,6 +155,8 @@ Automovilismo.mostrarHome = function (datosDescargados) {
  * Función principal para mostrar los datos enviados por la ruta "acerca de" de MS Plantilla
  */
 Automovilismo.mostrarAcercaDe = function (datosDescargados) {
+
+
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
 
@@ -179,6 +185,8 @@ Automovilismo.mostrarAcercaDe = function (datosDescargados) {
 
 
 Automovilismo.imprimeMuchasPersonas = function (vector){
+
+
     let msj = Automovilismo.plantillaTablaPersonas.cabecera
 
     if( vector && Array.isArray(vector)){

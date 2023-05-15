@@ -50,43 +50,6 @@ Quidditch.cerear = function ( num ) {
 Quidditch.QuidditchFormularioPersona = {}
 
 
-var historialSeleccion = [];
-var maximoHistorial = 10;
-
-function registrarSeleccion(opcion) {
-    historialSeleccion.push(opcion); // Agrega la selección al historial
-  
-    if (historialSeleccion.length > maximoHistorial) {
-      historialSeleccion.shift(); // Elimina el elemento más antiguo si se supera el máximo
-    }
-  
-    actualizarHistorial();
-    // Aquí puedes agregar cualquier lógica adicional que necesites realizar al registrar la selección del usuario
-  }
-
-  function actualizarHistorial() {
-    var historialHTML = historialSeleccion.slice().reverse().map(function(opcion) {
-      return '<a href="javascript:void(0)" onclick="ejecutarOpcion(\'' + opcion + '\')" class="opcion-principal">' + opcion + '</a>';
-    }).join('');
-    document.getElementById('historial-seleccion').innerHTML = historialHTML;
-  }
-
-function eliminarPrimerElemento(cadena) {
-    if (typeof cadena !== 'string') {
-      return cadena; // Retorna la cadena sin modificaciones si no es una cadena de texto
-    }
-  
-    var elementos = cadena.split('/');
-    if (elementos.length <= 1) {
-      return cadena; // Retorna la cadena sin modificaciones si solo hay un elemento o está vacía
-    }
-  
-    elementos.shift();
-    var nuevaCadena = elementos.join('/');
-    return nuevaCadena;
-  }
-  
-
 // Cabecera del formulario
 Quidditch.QuidditchFormularioPersona.formulario = `
 <form method='post' action=''>
@@ -208,7 +171,7 @@ Quidditch.descargarRuta = async function (ruta, callBackFn) {
  */
 Quidditch.mostrarHome = function (datosDescargados) {
 
-    registrarSeleccion("Home");
+    //registrarSeleccion("Home");
 
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
@@ -227,7 +190,7 @@ Quidditch.mostrarHome = function (datosDescargados) {
  */
 Quidditch.mostrarAcercaDe = function (datosDescargados) {
 
-    registrarSeleccion("Acerca de 🧹");
+    //registrarSeleccion("Acerca de 🧹");
 
     // Si no se ha proporcionado valor para datosDescargados
     datosDescargados = datosDescargados || this.datosDescargadosNulos
@@ -275,7 +238,7 @@ Quidditch.procesarAcercaDe = function () {
 
 Quidditch.imprimeMuchasPersonas = function (vector) {
 
-    registrarSeleccion("Listar jugadores con todos sus datos");
+    //registrarSeleccion("Listar jugadores con todos sus datos");
 
     // console.log(vector) // Para comprobar lo que hay en vector
 
@@ -292,7 +255,7 @@ Quidditch.imprimeMuchasPersonas = function (vector) {
 
 Quidditch.imprimeNombreMuchasPersonas = function (vector) {
 
-    registrarSeleccion("Listar jugadores solo con el nombre");
+    //registrarSeleccion("Listar jugadores solo con el nombre");
 
      //console.log(vector) // Para comprobar lo que hay en vector
 
@@ -309,7 +272,7 @@ Quidditch.imprimeNombreMuchasPersonas = function (vector) {
 
 Quidditch.imprimeOrdenadorAlfabeticamente = function(vector,campo){
 
-    registrarSeleccion("Listar alfabeticamente por nombre");
+    //registrarSeleccion("Listar alfabeticamente por nombre");
 
         //console.log(vector) // Para comprobar lo que hay en vector
 
@@ -347,7 +310,7 @@ Quidditch.imprimeOrdenadorAlfabeticamente = function(vector,campo){
 
 Quidditch.imprimeOrdenadorAlfabeticamenteTodosCampos = function(vector,campo){
 
-    registrarSeleccion("Listar datos por nombre alfabéticamente");
+    //registrarSeleccion("Listar datos por nombre alfabéticamente");
 
     //console.log(vector) // Para comprobar lo que hay en vector
     // Compongo el contenido que se va a mostrar dentro de la tabla
