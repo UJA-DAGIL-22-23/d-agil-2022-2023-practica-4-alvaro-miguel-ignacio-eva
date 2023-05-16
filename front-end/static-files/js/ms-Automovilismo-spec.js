@@ -10,8 +10,8 @@
 // Constantes para usar en las pruebas
 const elementoTituloAutomovilismo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_TITULO)
 const elementoContenidoAutomovilismo = document.getElementById(Frontend.ID_SECCION_PRINCIPAL_CONTENIDO)
-const TITULO_HOME_AUTOMOVILISMO = "Plantilla Home"
-const TITULO_ACERCA_DE_AUTOMOVILISMO = "Plantilla Acerca de"
+const TITULO_HOME_AUTOMOVILISMO = "Automovilismo Home"
+const TITULO_ACERCA_DE_AUTOMOVILISMO = "Automovilismo Acerca de"
 const LISTADO_IMPRIMIR_MUCHAS_PERSONAS_AUTOMOVILISMO = "Listado de personas con todos los datos "
 const MENSAJE_MICROSERVICIO="Microservicio MS Automovilismo: acerca de"
 
@@ -37,7 +37,7 @@ function esperar(ms) {
 
 // SPECS a probar
 
-describe("Plantilla.mostrarHome: ", function () {
+describe("Automovilismo.mostrarHome: ", function () {
 
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
@@ -75,7 +75,7 @@ describe("Plantilla.mostrarHome: ", function () {
 })
 
 
-describe("Plantilla.mostrarAcercaDe: ", function () {
+describe("Automovilismo.mostrarAcercaDe: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
             Automovilismo.mostrarAcercaDe()
@@ -128,7 +128,7 @@ describe("Plantilla.mostrarAcercaDe: ", function () {
 
 
 
-describe("Plantilla.imprimeMuchasPersonas: ", function () {
+describe("Automovilismo.imprimeMuchasPersonas: ", function () {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
             Automovilismo.imprimeMuchasPersonas([])

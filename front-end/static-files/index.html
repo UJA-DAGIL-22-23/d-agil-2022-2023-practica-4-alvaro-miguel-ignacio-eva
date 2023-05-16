@@ -17,18 +17,24 @@
 <body>
     <h1>Aplicación Microservicios Deportes</h1>
 
-    <a href="javascript:Frontend.mostrarAcercaDeTodos()" class="opcion-principal"> Mostrar Acerca de</a>
-    <a href="javascript:Frontend.burcarNombresDeporte()" class="opcion-principal"> Buscar por nombre</a>
-    <a href="javascript:Frontend.contraste()" class="opcion-principal"> ALTO CONTRASTE</a>
-    <a href="javascript:Frontend.mostrarNombresHu06()" class="opcion-principal"> Listar nombres </a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🌍 Mostrar Acerca de'); Frontend.mostrarAcercaDeTodos();" 
+            class="opcion-principal" title="Llama a la ruta">Mostrar Acerca de</a>
 
-    <a href="javascript:Frontend.TodosNombresOrdenados()" class="opcion-principal"
-    title="Muestra los nombres de los jugadores de todas las bases de datos ordenados alfabéticamebte (HU08)">Nombres todos jugadores ordenados</a>
-
+    
+    <a href="javascript:" onclick="registrarSeleccion('🌍 Buscar por nombre'); Frontend.burcarNombresDeporte()"
+            class="opcion-principal" title="Llama a la ruta">Buscar por nombre</a>
 
 
-    <a href="javascript:Frontend.contraste()" class="opcion-principal">ALTO CONTRASTE</a>
+    <a href="javascript:" onclick="registrarSeleccion('🌍 Listar nombres'); Frontend.mostrarNombresHu06()"
+            class="opcion-principal" title="Llama a la ruta">Listar nombres</a>
 
+
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🌍 Nombres todos jugadores ordenados'); Frontend.TodosNombresOrdenados()"
+            class="opcion-principal" title="Muestra los nombres de los jugadores de todas las bases de datos ordenados alfabéticamente (HU08)">Nombres todos jugadores ordenados</a>
+
+
+    <a href="javascript:void(0)" onclick="registrarSeleccion('☀️Alto contraste🌙'); Frontend.contraste()" 
+            class="opcion-principal">☀️Alto contraste🌙</a>
 
     <div class="dropdown">
       <button class="opcion-principal">Historial</button>
@@ -41,11 +47,11 @@
 
     <!-- Barra de navegación de Automovilismo -->
     <nav>
-        <a href="javascript:void(0)" onclick="Automovilismo.procesarHome(); registrarSeleccion('🏎️ Home')"
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏎️ Home'); Automovilismo.procesarHome()"
             class="opcion-principal" title="Llama a la ruta / del MS Automovilismo">Home</a>
-        <a href="javascript:void(0)" onclick="Automovilismo.procesarAcercaDe(); registrarSeleccion('🏎️ Acerca de 🏎️')"
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏎️ Acerca de 🏎️'); Automovilismo.procesarAcercaDe()"
             class="opcion-principal" title="Llama a la ruta /acercade del MS Automovilismo">Acerca de 🏎️</a>
-        <a href="javascript:void(0)" onclick="Automovilismo.lista(); registrarSeleccion('🏎️ Listado participantes')"
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏎️ Listado participantes'); Automovilismo.lista()"
             class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">
             Listado participantes
         </a>
@@ -57,30 +63,30 @@
     
     
     <nav>
-      <a href="javascript:void(0)" onclick="Quidditch.procesarHome(); registrarSeleccion('🧹 Home')"
+      <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Home'); Quidditch.procesarHome()"
         class="opcion-principal" title="Llama a la ruta / del MS Quidditch">Home</a>
-      <a href="javascript:void(0)" onclick="Quidditch.procesarAcercaDe(); registrarSeleccion('🧹 Acerca de 🧹')"
+      <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Acerca de 🧹'); Quidditch.procesarAcercaDe()"
         class="opcion-principal" title="Llama a la ruta /acercade del MS Quidditch">Acerca de 🧹</a>
-      <a href="javascript:void(0)" onclick="Quidditch.listar(); registrarSeleccion('🧹 Listar jugadores con todos sus datos')"
+      <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar jugadores con todos sus datos'); Quidditch.listar()"
         class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores con todos sus datos</a>
-      <a href="javascript:void(0)" onclick="Quidditch.listar2(); registrarSeleccion('🧹 Listar jugadores solo con el nombre')"
+      <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar jugadores solo con el nombre'); Quidditch.listar2()"
         class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar jugadores solo con el nombre</a>
-      <a href="javascript:void(0)" onclick="Quidditch.listar3('nombre'); registrarSeleccion('🧹 Listar alfabeticamente por nombre')"
+      <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar alfabeticamente por nombre'); Quidditch.listar3('nombre')"
         class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar alfabéticamente por nombre</a>
       <div class="dropdown">
         <button class="opcion-principal">Opciones de listar datos por</button>
         <div class="dropdown-content">
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('nombre'); registrarSeleccion('🧹 Listar nombres alfabéticamente')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar nombres alfabéticamente'); Quidditch.listar4('nombre')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">nombre alfabéticamente</a>
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('apellidos'); registrarSeleccion('🧹 Listar apellidos alfabéticamente')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar apellidos alfabéticamente'); Quidditch.listar4('apellidos')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">apellido alfabéticamente</a>
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('fechaNacimiento'); registrarSeleccion('🧹 Listar por fecha de nacimiento')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar por fecha de nacimiento'); Quidditch.listar4('fechaNacimiento')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">fecha de nacimiento</a>
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('casaHogwarts'); registrarSeleccion('🧹 Listar por casa de Hogwarts')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar por casa de Hogwarts'); Quidditch.listar4('casaHogwarts')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">casa de Hodwatsalfabéticamente</a>
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('tipoEscoba'); registrarSeleccion('🧹 Listar por tipo de escoba')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar por tipo de escoba'); Quidditch.listar4('tipoEscoba')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">tipo de escoba alfabéticamente</a>
-          <a href="javascript:void(0)" onclick="Quidditch.listar4('posicion'); registrarSeleccion('🧹 Listar por posición')"
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🧹 Listar por posición'); Quidditch.listar4('posicion')"
             class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">posición alfabéticamente</a>
         </div>
             
@@ -88,7 +94,7 @@
 
       <div style="padding-top: 30px">
         <input type="text" id="campo-busqueda">
-        <button class="btn" onclick="Quidditch.jugadorBuscado(document.getElementById('campo-busqueda').value); registrarSeleccion('🧹 Buscar por nombre')">
+        <button class="btn" onclick="registrarSeleccion('🧹 Buscar por nombre'); Quidditch.jugadorBuscado(document.getElementById('campo-busqueda').value)">
           Buscar por nombre
         </button>
       </div>
@@ -96,88 +102,86 @@
     
 
     <h2>Rugby</h2>
+
+
 <nav>
-    <a href="javascript:void(0)" onclick="Rugby.procesarHome(); registrarSeleccion('🏉 Home')" class="opcion-principal"
-        title="Llama a la ruta / del MS Rugby">Home</a>
-    <a href="javascript:void(0)" onclick="Rugby.procesarAcercaDe(); registrarSeleccion('🏉 Acerca de 🏉')" class="opcion-principal"
-        title="Llama a la ruta /acercade del MS Rugby">Acerca de 🏉</a>
-    <a href="javascript:void(0)" onclick="Rugby.listar(); registrarSeleccion('🏉 Listar datos jugadores')" class="opcion-principal mostrar"
-        title="Lista los nombres de la base de datos">Listar datos jugadores</a>
-    <a href="javascript:void(0)" onclick="Rugby.listar2(); registrarSeleccion('🏉 Listar nombre de jugadores')" class="opcion-principal mostrar"
-        title="Lista los nombres de la base de datos">Listar nombre de jugadores</a>
-    <a href="javascript:void(0)" onclick="Rugby.listar4('nombre'); registrarSeleccion('🏉 Listar nombres alfabéticamente')" class="opcion-principal mostrar"
-        title="Realiza un listado de todas las personas que hay en la BBDD">Listar nombres alfabéticamente</a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Home'); Rugby.procesarHome();" 
+      class="opcion-principal" title="Llama a la ruta / del MS Rugby">Home</a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Acerca de 🏉'); Rugby.procesarAcercaDe();" 
+      class="opcion-principal" title="Llama a la ruta /acercade del MS Rugby">Acerca de 🏉</a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar datos jugadores'); Rugby.listar();" 
+      class="opcion-principal mostrar" title="Lista los nombres de la base de datos">Listar datos jugadores</a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar nombre de jugadores'); Rugby.listar2();" 
+      class="opcion-principal mostrar" title="Lista los nombres de la base de datos">Listar nombre de jugadores</a>
+    <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar nombres alfabéticamente'); Rugby.listar4('nombre');" 
+      class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar nombres alfabéticamente</a>
     <div class="dropdown">
       <button class="opcion-principal">Opciones para listar por orden de:</button>
       <div class="dropdown-content">
-        <a href="javascript:void(0)" onclick="Rugby.listar3('nombre'); registrarSeleccion('🏉 Listar por orden de nombre')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Nombre</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('apellidos'); registrarSeleccion('🏉 Listar por orden de apellido')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Apellido</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('equipo'); registrarSeleccion('🏉 Listar por orden de equipo')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Equipo</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('posicion'); registrarSeleccion('🏉 Listar por orden de posición')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Posición</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('zona'); registrarSeleccion('🏉 Listar por orden de zona')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Zona</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('peso'); registrarSeleccion('🏉 Listar por orden de peso')" class="opcionprincipal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Peso</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('altura'); registrarSeleccion('🏉 Listar por orden de altura')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Altura</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('fecha'); registrarSeleccion('🏉 Listar por orden de fecha de nacimiento')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Fecha de nacimiento</a>
-        <a href="javascript:void(0)" onclick="Rugby.listar3('numTrakles'); registrarSeleccion('🏉 Listar por orden de trakles')" class="opcion-principal"
-            title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Trakles</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de nombre'); Rugby.listar3('nombre');" 
+          class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Nombre</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de apellido'); Rugby.listar3('apellidos');"
+          class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Apellido</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de equipo'); Rugby.listar3('equipo');" 
+          class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Equipo</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de posición'); Rugby.listar3('posicion');" 
+          class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Posición</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de zona'); Rugby.listar3('zona');" 
+          class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Zona</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de peso'); Rugby.listar3('peso');" class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Peso</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de altura'); Rugby.listar3('altura');" class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Altura</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de fecha de nacimiento'); Rugby.listar3('fecha');" class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Fecha de nacimiento</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏉 Listar por orden de trakles'); Rugby.listar3('numTrakles');" class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Trakles</a>
       </div>
     </div>
-  </nav>
-
-
-  
-  <h2>Badminton</h2>
-<!-- Barra de navegación de Badminton -->
-<nav>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarHome(); registrarSeleccion('🏸 Home')" class="opcion-principal"
-       title="Llama a la ruta / del MS Badminton">Home</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarAcercaDe(); registrarSeleccion('🏸 Acerca de 🏸')" class="opcion-principal"
-       title="Llama a la ruta /acercade del MS Badminton">Acerca de 🏸</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarListarNombres(); registrarSeleccion('🏸 Listar nombres')" class="opcion-principal"
-       title="Listar nombres de los jugadores de la base de datos">Listar nombres</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarListarTodos(); registrarSeleccion('🏸 Listar todos los datos')" class="opcion-principal"
-       title="Listar nombres de los jugadores de la base de datos">Listar todos los datos</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('nombre'); registrarSeleccion('🏸 Listar nombres alfabéticamente')" class="opcion-principal mostrar"
-       title="Realiza un listado de todas las personas que hay en la BBDD">Listar nombres alfabéticamente</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.procesarOrdenadoAlfabeticamente('nombre'); registrarSeleccion('🏸 Listar todos los nombres ordenados')" class="opcion-principal mostrar"
-       title="Realiza un listado de todas las personas que hay en la BBDD">Listar todos los nombres ordenados</a>
-    <a href="javascript:void(0)" onclick="BADMINTON.mostrar('360441236687945933'); registrarSeleccion('🏸 Mostrar un jugador')" class="opcion-principal mostrar"
-       title="Realiza un listado de todas las personas que hay en la BBDD">Mostrar un jugador</a>
-       <div class="dropdown">
-        <button class="opcion-principal">Opciones para listar por orden de:</button>
-        <div class="dropdown-content">
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('nombre'); registrarSeleccion('🏸 Listar por orden de nombre')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Nombre</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('apellidos'); registrarSeleccion('🏸 Listar por orden de apellidos')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Apellido</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('fechaNacimiento'); registrarSeleccion('🏸 Listar por orden de fecha de nacimiento')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Fecha de nacimiento</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('direccion'); registrarSeleccion('🏸 Listar por orden de dirección')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Dirección</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('peso'); registrarSeleccion('🏸 Listar por orden de peso')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Peso</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('altura'); registrarSeleccion('🏸 Listar por orden de altura')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Altura</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('manoDominante'); registrarSeleccion('🏸 Listar por orden de mano dominante')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Mano dominante</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('clubActual'); registrarSeleccion('🏸 Listar por orden de club actual')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Club actual</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('nTorneosGanados'); registrarSeleccion('🏸 Listar por orden de número de torneos ganados')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Número de torneos ganados</a>
-            <a href="javascript:void(0)" onclick="BADMINTON.procesarCampoOrdenado('nTorneosJugados'); registrarSeleccion('🏸 Listar por orden de número de torneos jugados')" class="opcion-principal"
-              title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Número de torneos jugados</a>
-        </div>
-      </div>
 </nav>
-    
+
+
+<h2>Badminton</h2>
+
+
+
+    <nav>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Home'); BADMINTON.procesarHome();" 
+          class="opcion-principal" title="Llama a la ruta / del MS Badminton">Home</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Acerca de 🏸'); BADMINTON.procesarAcercaDe();" 
+          class="opcion-principal" title="Llama a la ruta /acercade del MS Badminton">Acerca de 🏸</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar nombres'); BADMINTON.procesarListarNombres();" 
+          class="opcion-principal" title="Listar nombres de los jugadores de la base de datos">Listar nombres</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar todos los datos'); BADMINTON.procesarListarTodos();" 
+          class="opcion-principal" title="Listar nombres de los jugadores de la base de datos">Listar todos los datos</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar nombres alfabéticamente'); BADMINTON.procesarCampoOrdenado('nombre');" 
+          class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar nombres alfabéticamente</a>
+        <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar todos los nombres ordenados'); BADMINTON.procesarOrdenadoAlfabeticamente('nombre');" 
+          class="opcion-principal mostrar" title="Realiza un listado de todas las personas que hay en la BBDD">Listar todos los nombres ordenados</a>
+          <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Mostrar un jugador'); BADMINTON.mostrar('360441236687945933')" class="opcion-principal mostrar"
+          title="Realiza un listado de todas las personas que hay en la BBDD">Mostrar un jugador</a>
+          <div class="dropdown">
+           <button class="opcion-principal">Opciones para listar por orden de:</button>
+            <div class="dropdown-content">
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de apellidos'); BADMINTON.procesarCampoOrdenado('apellidos');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Apellido</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de fecha de nacimiento'); BADMINTON.procesarCampoOrdenado('fechaNacimiento');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Fecha de nacimiento</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de dirección'); BADMINTON.procesarCampoOrdenado('direccion');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Dirección</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de peso'); BADMINTON.procesarCampoOrdenado('peso');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Peso</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de altura'); BADMINTON.procesarCampoOrdenado('altura');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Altura</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de mano dominante'); BADMINTON.procesarCampoOrdenado('manoDominante');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Mano dominante</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de club actual'); BADMINTON.procesarCampoOrdenado('clubActual');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Club actual</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de número de torneos ganados'); BADMINTON.procesarCampoOrdenado('nTorneosGanados');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Número de torneos ganados</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de número de torneos jugados'); BADMINTON.procesarCampoOrdenado('nTorneosJugados');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Número de torneosjugados</a>
+              <a href="javascript:void(0)" onclick="registrarSeleccion('🏸 Listar por orden de nivel de habilidad'); BADMINTON.procesarCampoOrdenado('nivelHabilidad');" 
+                class="opcion-principal" title="Realizar un listado de todos los nombres de todos los jugadores que hay en la BBDD ordenados alfabéticamente">Nivel de habilidad</a>
+            </div>
+          </div>
+    </nav>
     <!-- 
         Article en el que se va a mostrar la info cuando se pinche una opción del menú 
         Todos los apartados de este article se rellenarán con funciones en Javascript
