@@ -43,7 +43,7 @@ También en esta reunión hemos hablado acerca de cómo vamos a conseguir termin
 
 Por último, hemos creado un grupo de wasap para hablar diariamente sobre las dificultades que podemos tener o simplemente para poder ponernos al día de forma breve. Asimismo, una vez por semana quedamos presencialmente para poder trabajar en un mismo espacio presencialmente para poder animarnos. 
 
- ## Funcionalidades hechas en el Sprint 
+ ## Sprint Review 
  
  ### Historias de usuario implementadas
  
@@ -81,3 +81,27 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
 
  <img src='/Capturas criterios de validacion/HU 10 Contraste.jpg' width='800'/> 
  
+ 
+ ## Sprint Retrospective
+
+* Puntos positivos:
+
+En nuestra opinión hemos afrontado la práctica 4, intentando no caer en los mismos errores de la práctica anterior. 
+
+Es por esto que nos hemos organizado para poder empezar a trabajar desde la primera semana y así poder llevar a cabo un desarrollo sostenible y ágil. Para que el trabajo no se nos acumule para las últimas semanas, hemos tratado de realizar un número razonable de commits por semana.
+
+Además una integrante Erasmus del grupo abandonó el grupo, quedando 4 integrantes para realizar todo el incremento. Aun así gracias a el buen reparto de las HU desde un principio, hemos podido completar todas las tareas en el Sprint.
+
+Otro punto positivo en nuestra opinión es que en la primera sesión de prácticas añadimos diferentes archivos al ignore para que no se subieran y descargaran con cada pull y push.
+
+Por último, para el correcto desarrollo repartimos las diferentes Historias de usuario del product backlog entre los 4 integrantes, creando diferentes ramas para llevar a cabo las historias de usuario y no entorpecernos entre nosotros haciéndolo todo en la rama main.
+Desarrollar cada HU de esta manera nos ha facilitado poder aportar descripciones de estas mismas y criterios de validación.
+
+
+* Cosas a mejorar
+
+Como hemos mencionado anteriormente, todos los integrantes hemos trabajado en diferentes ramas pero aun así, hemos corregido algunos errores y cambiado algunas cosas en la rama main, cuando quizás deberíamos de haberlo hecho en otras ramas.
+
+
+ 
+
