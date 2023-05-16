@@ -112,3 +112,14 @@ table.listado-personas tbody tr {
 .btn:hover {
     background-color: #1c7774;
 }
+
+.opcion-historial {
+    display: block;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
