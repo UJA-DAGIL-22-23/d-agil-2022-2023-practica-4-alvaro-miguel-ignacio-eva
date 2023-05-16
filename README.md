@@ -43,35 +43,41 @@ También en esta reunión hemos hablado acerca de cómo vamos a conseguir termin
 
 Por último, hemos creado un grupo de wasap para hablar diariamente sobre las dificultades que podemos tener o simplemente para poder ponernos al día de forma breve. Asimismo, una vez por semana quedamos presencialmente para poder trabajar en un mismo espacio presencialmente para poder animarnos. 
 
- ### Funcionalidades hechas en el Sprint 
+ ## Funcionalidades hechas en el Sprint 
  
- ## Historias de usuario implementadas
+ ### Historias de usuario implementadas
  
- * HU 01-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva
+  ### HU 01-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva
 
 <img src='/Capturas criterios de validacion/HU 01 Quidditch.jpg' width='750'/>  
 
- * HU 02-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro
+   ### HU 02-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro
 
 <img src='/Capturas criterios de validacion/HU 02 Rugby.jpg' width='750'/>  
  
-  * HU 03-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio
+   ### HU 03-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio
 
 <img src='/Capturas criterios de validacion/HU 03 Automovilismo.jpg' width='550'/>  
 
- * HU 04-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel
+### HU 04-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel
 
 <img src='/Capturas criterios de validacion/HU 04 Badminton.jpg' width='750'/>  
 
- * HU 06-Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
+### HU 06-Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de”
 
 <img src='/Capturas criterios de validacion/HU-06 terminada.jpg' width='750'/> 
 
- * HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.”
+### HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.”
  
  ![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/e1fc5865-3233-4f76-89cb-5cce6a92d9a1)
 ![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/89883b94-33e3-412f-9d46-10efeba86213)
 
+### HU 08-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app ordenado alfabéticamente.”
 
+ <img src='/Capturas criterios de validacion/HU 08 Orden.jpg' width='550'/> 
+  <img src='/Capturas criterios de validacion/HU 08 Orden2.jpg' width='350'/> 
+ 
+### HU 10-Añadir un modo alto contraste a la aplicación.”
 
+ <img src='/Capturas criterios de validacion/HU 10 Contraste.jpg' width='800'/> 
  
