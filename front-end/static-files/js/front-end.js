@@ -142,8 +142,8 @@ Frontend.mostrarAcercaDe = function(datosDescargados){
     </ul>
     </div>
     `;
-   Frontend.AcercaDeMsj += mensajeAMostrar;
-   Frontend.Article.actualizar("Acerca De", Frontend.AcercaDeMsj);
+   Frontend.AcercaDeMensaje += mensajeAMostrar;
+   Frontend.Article.actualizar("Acerca De", Frontend.AcercaDeMensaje);
 }
 
 /**
