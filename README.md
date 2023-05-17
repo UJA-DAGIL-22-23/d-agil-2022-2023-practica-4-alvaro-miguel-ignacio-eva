@@ -3,17 +3,13 @@
 
 # Practica 4 : 
   ## Integrantes del equipo 
-  * Nombre: Álvaro Expósito Carrillo
-   * Correo: aec00028@red.ujaen.es
+  * Álvaro Expósito Carrillo - aec00028@red.ujaen.es
 
-   * Nombre: Eva Temes Moya
-  * Correo: etm00016@red.ujaen.es
+   * Eva Temes Moya - etm00016@red.ujaen.es
 
-   * Nombre: Ignacio Cervilla Gomáriz
-   * Correo: icg00048@red.ujaen.es
+   * Ignacio Cervilla Gomáriz - icg00048@red.ujaen.es
 
-  * Nombre: Miguel Ángel Carrasco Infante
-   * Correo: maci0002@red.ujaen.es
+  * Miguel Ángel Carrasco Infante - maci0002@red.ujaen.esx
   
 ## Trello: 
 
