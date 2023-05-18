@@ -9,7 +9,7 @@
 
    * Ignacio Cervilla Gomáriz - icg00048@red.ujaen.es
 
-  * Miguel Ángel Carrasco Infante - maci0002@red.ujaen.esx
+  * Miguel Ángel Carrasco Infante - maci0002@red.ujaen.es
   
 ## Trello: 
 
@@ -34,16 +34,16 @@ Una vez realizada la reunión el día 24/04/2023, hemos seleccionado qué podemo
 
 Las siguientes historias de usuario son la meta para terminar antes del 19/05/2023:
 
-* HU 01-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva (HU implementada por Eva)
-* HU 02-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro (HU implementada por Álvaro)
-* HU 03-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio (HU implementada por Ignacio)
-* HU 04-Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel (HU implementada por Miguel)
-* HU 06-Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de” (HU implementada por Miguel)
-* HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.” (HU implementada por Miguel)
-* HU 08-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app ordenado alfabéticamente.” (HU implementada por Álvaro)
-* HU 09-Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (HU implementada por Eva)
-* HU 10-Añadir un modo alto contraste a la aplicación.” (HU implementada por Álvaro)
-* HU 11-Mostrar un historial de las últimas 10 opciones que ha pulsado el usuario en nuestra app. (HU implementada por Ignacio)
+* HU 01 - Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Eva (HU implementada por Eva)
+* HU 02 - Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Álvaro (HU implementada por Álvaro)
+* HU 03 - Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Ignacio (HU implementada por Ignacio)
+* HU 04 - Ofrecer en la aplicación toda la funcionalidad de la práctica individual creada por Miguel (HU implementada por Miguel)
+* HU 06 - Ver en una sola página la información de todos los autores de la aplicación al pulsar en el botón “Acerca de” (HU implementada por Miguel)
+* HU 07 - Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.” (HU implementada por Miguel)
+* HU 08 - Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app ordenado alfabéticamente.” (HU implementada por Álvaro)
+* HU 09 - Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario. (HU implementada por Eva)
+* HU 10 - Añadir un modo alto contraste a la aplicación.” (HU implementada por Álvaro)
+* HU 11 - Mostrar un historial de las últimas 10 opciones que ha pulsado el usuario en nuestra app. (HU implementada por Ignacio)
 
 
 
@@ -93,6 +93,11 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
 ### HU 10-Añadir un modo alto contraste a la aplicación.
 
  <img src='/Capturas criterios de validacion/HU 10 Contraste.jpg' width='800'/> 
+ 
+ 
+### HU 11-Mostrar un historial con las 10 últimas opciones marcadas por el usuario
+
+ <img src='/Capturas criterios de validacion/HU 11 Historial.jpg' width='800'/> 
  
  
  ## Sprint Retrospective
