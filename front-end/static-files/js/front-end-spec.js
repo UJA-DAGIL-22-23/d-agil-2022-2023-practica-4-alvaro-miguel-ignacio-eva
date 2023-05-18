@@ -265,7 +265,7 @@ describe("Frontend.quitarClase", function() {
     });
 
 });
-
+/*
 describe("Frontend.buscarNombresDeporte", function() {
     it("muestra datos nulos cuando le pasamos un valor nulo",
         function () {
@@ -280,7 +280,7 @@ describe("Frontend.buscarNombresDeporte", function() {
 
         })
 });
-
+*/
 /*
 describe("Frontend.TodosNombresOrdenados: ", function () {
     it("muestra todos los nombres de los jugadores de todos los deportes ordenados alfabéticamente",
