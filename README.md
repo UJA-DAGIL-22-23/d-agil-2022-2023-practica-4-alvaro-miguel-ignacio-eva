@@ -47,9 +47,9 @@ Las siguientes historias de usuario son la meta para terminar antes del 19/05/20
 
 
 
-También en esta reunión hemos hablado acerca de cómo vamos a conseguir terminar el sprint exitosamente. Hemos decidido dividirnos las tareas entre todos los compañeros, cada uno ha elegido cuál se veía capaz de hacer, además hemos decidido que prácticamente por cada historia de usuario vamos a usar una rama que después fusionaremos con el main y así evitar conflictos al usar todos la misma rama.
+También en esta reunión hemos hablado acerca de cómo vamos a conseguir terminar el sprint exitosamente. Como se puede ver justo arriba, hemos decidido dividirnos las tareas entre todos los compañeros, cada uno ha elegido cuál se veía capaz de hacer. Además hemos decidido que, prácticamente por cada historia de usuario, vamos a usar una rama que después fusionaremos con el main y así evitar conflictos al usar todos la misma rama.
 
-Por último, hemos creado un grupo de wasap para hablar diariamente sobre las dificultades que podemos tener o simplemente para poder ponernos al día de forma breve. Asimismo, una vez por semana quedamos presencialmente para poder trabajar en un mismo espacio presencialmente para poder animarnos. 
+Por último, hemos creado un grupo de wasap para hablar diariamente sobre las dificultades que podemos tener o simplemente para poder ponernos al día de forma breve. Asimismo, una vez por semana quedamos presencialmente para poder trabajar en un mismo espacio y así para poder animarnos y fomentar el trabajo en equipo. 
 
  ## Sprint Review 
  
@@ -75,17 +75,22 @@ Por último, hemos creado un grupo de wasap para hablar diariamente sobre las di
 
 <img src='/Capturas criterios de validacion/HU-06 terminada.jpg' width='750'/> 
 
-### HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.”
+### HU 07-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app.
  
  ![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/e1fc5865-3233-4f76-89cb-5cce6a92d9a1)
 ![image](https://github.com/UJA-DAGIL-22-23/d-agil-2022-2023-practica-4-alvaro-miguel-ignacio-eva/assets/124813808/89883b94-33e3-412f-9d46-10efeba86213)
 
-### HU 08-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app ordenado alfabéticamente.”
+### HU 08-Ver un listado solo con los nombres de todos los jugadores/equipos de todos los deportes incluidos en la app ordenado alfabéticamente.
 
  <img src='/Capturas criterios de validacion/HU 08 Orden.jpg' width='550'/> 
   <img src='/Capturas criterios de validacion/HU 08 Orden2.jpg' width='350'/> 
+  
+### HU 09-Mostrar el nombre y el deporte de todos los jugadores/equipos que contengan una determinada cadena introducida por el usuario.
+
+ <img src='/Capturas criterios de validacion/HU09Buscar.JPG' width='550'/> 
+  <img src='/Capturas criterios de validacion/HU09Resultado.JPG' width='550'/> 
  
-### HU 10-Añadir un modo alto contraste a la aplicación.”
+### HU 10-Añadir un modo alto contraste a la aplicación.
 
  <img src='/Capturas criterios de validacion/HU 10 Contraste.jpg' width='800'/> 
  
@@ -116,6 +121,8 @@ Aquí añadimos una evidencia del trabajo con diferentes ramas para cada HU
 * Cosas a mejorar
 
 Como hemos mencionado anteriormente, todos los integrantes hemos trabajado en diferentes ramas pero aun así, hemos corregido algunos errores y cambiado algunas cosas en la rama main, cuando quizás deberíamos de haberlo hecho en otras ramas.
+
+
 
 
  
